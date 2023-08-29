@@ -1,9 +1,38 @@
 import productApi from "../api/productAPI";
 import { renderProductList } from "../utils/productRender";
-async function getProduct() {
-  const { arrayProduct } = await productApi.getAll();
-  console.log(arrayProduct);
-  renderProductList("product__List", arrayProduct);
+import { renderPagination } from "../utils/renderPagination";
+// async function getProduct() {
+//   const { arrayProduct } = await productApi.getAll();
+//   console.log(arrayProduct);
+//   renderProductList("product__List", arrayProduct);
+// }
+
+// getProduct();
+
+const itemsPerPage = 12; // Số mục trên mỗi trang
+
+// Hàm để lấy và hiển thị dữ liệu từ trang cụ thể
+async function getDataForPage(page) {
+  try {
+    const startIndex = (page - 1) * itemsPerPage; // Tính toán vị trí bắt đầu
+
+    const { arrayProduct, pagination } = await productApi.getAll(
+      page,
+      itemsPerPage
+    );
+    renderProductList("product__List", arrayProduct);
+
+    // Hiển thị thông tin phân trang
+    renderPagination("pagination", page, pagination.totalPages, onPageClick);
+  } catch (error) {
+    console.error("Lỗi khi lấy dữ liệu sản phẩm: ", error);
+  }
 }
 
-getProduct();
+// Hàm xử lý sự kiện khi người dùng nhấp vào một trang cụ thể
+function onPageClick(page) {
+  getDataForPage(page);
+}
+
+// Khởi đầu: Lấy dữ liệu cho trang đầu tiên
+getDataForPage(1);
