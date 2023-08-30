@@ -1,13 +1,6 @@
 import productApi from "../api/productAPI";
 import { renderProductList } from "../utils/productRender";
 import { renderPagination } from "../utils/renderPagination";
-// async function getProduct() {
-//   const { arrayProduct } = await productApi.getAll();
-//   console.log(arrayProduct);
-//   renderProductList("product__List", arrayProduct);
-// }
-
-// getProduct();
 
 const itemsPerPage = 12; // Số mục trên mỗi trang
 
