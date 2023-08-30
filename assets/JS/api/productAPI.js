@@ -5,11 +5,16 @@ const productApi = {
     const params = { page, pageSize };
     return axiosClient.get(url, { params });
   },
-  // getPaginatedProducts(page, pageSize) {
-  //   const url = "/api/Product/paginated";
-  //   const params = { page, pageSize };
-  //   return axiosClient.get(url, { params });
-  // },
+  getProductsDress(page, pageSize) {
+    const url = "/api/Product/productDress";
+    const params = { page, pageSize };
+    return axiosClient.get(url, { params });
+  },
+  getProductsShirt(page, pageSize) {
+    const url = "/api/Product/productShirt";
+    const params = { page, pageSize };
+    return axiosClient.get(url, { params });
+  },
 };
 
 export default productApi;

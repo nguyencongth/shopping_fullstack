@@ -11,7 +11,7 @@ export function renderPagination(
 
   // Tạo nút "Trang đầu"
   const firstPageButton = createPaginationButton(
-    "&laquo;",
+    "firstPage",
     1,
     currentPage,
     onPageClick
@@ -20,7 +20,7 @@ export function renderPagination(
 
   // Tạo nút "Trang trước"
   const prevPageButton = createPaginationButton(
-    "&lt;",
+    "prevPage",
     currentPage - 1,
     currentPage,
     onPageClick
@@ -40,7 +40,7 @@ export function renderPagination(
 
   // Tạo nút "Trang sau"
   const nextPageButton = createPaginationButton(
-    "&gt;",
+    "nextPage",
     currentPage + 1,
     currentPage,
     onPageClick
@@ -49,7 +49,7 @@ export function renderPagination(
 
   // Tạo nút "Trang cuối"
   const lastPageButton = createPaginationButton(
-    "&raquo;",
+    "lastPage",
     totalPages,
     currentPage,
     onPageClick
@@ -59,13 +59,13 @@ export function renderPagination(
 
 function createPaginationButton(label, page, currentPage, onPageClick) {
   const button = document.createElement("li");
-  if (label === "&laquo;") {
+  if (label === "firstPage") {
     button.innerHTML = `<span aria-hidden="true">&laquo;</span>`;
-  } else if (label === "&raquo;") {
+  } else if (label === "lastPage") {
     button.innerHTML = `<span aria-hidden="true">&raquo;</span>`;
-  } else if (label === "&lt;") {
+  } else if (label === "prevPage") {
     button.innerHTML = `<span aria-hidden="true">&lt;</span>`;
-  } else if (label === "&gt;") {
+  } else if (label === "nextPage") {
     button.innerHTML = `<span aria-hidden="true">&gt;</span>`;
   } else {
     button.textContent = label;
