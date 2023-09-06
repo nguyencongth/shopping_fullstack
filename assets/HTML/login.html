@@ -8,39 +8,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <link rel="stylesheet" href="../CSS/slick.css">
     <link rel="stylesheet" href="../CSS/base.css">
     <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/login-logup.css">
     <link rel="stylesheet" href="../CSS/pre-footer.css">
     <link rel="stylesheet" href="../CSS/footer.css">
-    <link rel="stylesheet" href="../CSS/allProduct.css">
-    <link rel="stylesheet" href="../CSS/pagination.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>TẤT CẢ SẢN PHẨM - 2T-STORE</title>
+    <title>TÀI KHOẢN- 2T-STORE</title>
     <link rel="icon" type="image/x-icon" href="../img/logo-2T.png">
 </head>
 
 <body>
-    <template id="postTemplate">
-        <div class="gird-uniform__item large--one--third pd-left5">
-            <div class="product-item">
-                <div class="product-image">
-                    <img class="product-image-item" src="../img/dam.png" alt="">
-                    <div class="product-action">
-                        <div>
-                            <a href="" class="btn-tv">XEM THÊM</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-item-info">
-                    <h4 class="image-title">Đầm thiết kế peplum D19832</h4>
-                    <span class="current-price">1,599,000₫</span>
-                </div>
-            </div>
-        </div>
-    </template>
     <header id="header">
         <div class="desktop-header">
             <div class="desktop-header-top">
@@ -116,8 +96,8 @@
                                                     Tài khoản
                                                 </a>
                                                 <ul class="no-bullets" style="max-height: 104px;">
-                                                    <li><a href="../HTML/login.html">Đăng nhập</a></li>
-                                                    <li><a href="../HTML/register.html">Đăng ký</a></li>
+                                                    <li><a href="./login.html">Đăng nhập</a></li>
+                                                    <li><a href="./register.html">Đăng ký</a></li>
                                                 </ul>
                                             </li>
                                             <li class="dropdown icon-item search-li float-pc">
@@ -144,6 +124,7 @@
             </div>
         </div>
     </header>
+
     <div id="breadcrumb-wrapper">
         <div class="breadcrumb-content">
             <div class="wrapper">
@@ -151,141 +132,38 @@
                     <div class="breadcrumb-small">
                         <a href="../../index.html">Trang chủ</a>
                         <span>/</span>
-                        <span>TẤT CẢ SẢN PHẨM</span>
+                        <span>Tài Khoản</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div id="banner" class="">
-        <a href="">
-            <img src="../img/banner_allproduct.png" alt="" width="100%">
-        </a>
-    </div>
-    <div id="collection-wrapper">
-        <div class="wrapper">
-            <div class="inner">
-                <div class="block-gird">
-                    <div class="block-gird-item large--one">
-                        <div class="collection-sidebar-categories">
-                            <div class="collection-categories">
-                                <button class="categories">
-                                    <span>Danh mục</span>
-                                </button>
-                                <div class="panel">
-                                    <ul class="no-bullets">
-                                        <li class="active">
-                                            <a href="./allProduct.html">Tất cả sản phẩm</a>
-                                        </li>
-                                        <li class="hasmenu">
-                                            <a href="./dam.html">Đầm</a>
-                                            <ul class="no-bullets">
-                                                <li><a href="">Đầm suông</a></li>
-                                                <li><a href="">Đầm dáng A</a></li>
-                                                <li><a href="">Đầm ôm</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="hasmenu">
-                                            <a href="./aosomi.html">Áo sơ mi</a>
-                                            <ul class="no-bullets">
-                                                <li><a href="">Dài tay</a></li>
-                                                <li><a href="">Ngắn tay</a></li>
-                                                <li><a href="">Tay lỡ</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="hasmenu">
-                                            <a href="">Quần</a>
-                                            <ul class="no-bullets">
-                                                <li><a href="">Quần short</a></li>
-                                                <li><a href="">Quần lửng</a></li>
-                                                <li><a href="">Quần dài</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="hasmenu">
-                                            <a href="">Chân váy</a>
-                                            <ul class="no-bullets">
-                                                <li><a href="">Chân váy xếp li</a></li>
-                                                <li><a href="">Chân váy bút chì</a></li>
-                                                <li><a href="">Chân váy chữ A</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="hasmenu">
-                                            <a href="">Set bộ</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="block-gird-item large--three">
-                        <div class="collection-content-wrapper">
-                            <div class="collection-head">
-                                <div class="block-gird">
-                                    <div class="block-gird-item large--one">
-                                        <div class="collection-title">
-                                            <h1>TẤT CẢ SẢN PHẨM</h1>
-                                        </div>
-                                    </div>
-                                    <div class="block-gird-item large--two">
-                                        <div class="collection-sorting-wrapper">
-                                            <div class="collection-sidebar-wrapper">
-                                                <div class="sidebar-uniform-flex">
-                                                    <div class="sidebar-item">
-                                                        <div class="collection-filter-size">
-                                                            <button class="accordion">
-                                                                <span>Kích cỡ</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="sidebar-item">
-                                                        <div class="collection-filter-color">
-                                                            <button class="accordion">
-                                                                <span>Màu sắc</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="sidebar-item">
-                                                        <div class="collection-filter-price">
-                                                            <button class="accordion">
-                                                                <span>Giá</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="collection-body">
-                                <div class="gird-uniform product-list" id="product__List">
-                                    <div class="gird-uniform__item large--one--third pd-left5">
-                                        <div class="product-item">
-                                            <div class="product-image">
-                                                <img src="../img/dam.png" alt="">
-                                                <div class="product-action">
-                                                    <div>
-                                                        <a href="" class="btn-tv">XEM THÊM</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="product-item-info">
-                                                <h4 class="image-title">Đầm thiết kế peplum D19832</h4>
-                                                <span class="current-price">1,599,000₫</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <ul class="pagination" id="pagination">
-                                    <!-- Phân trang sẽ được hiển thị ở đây -->
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+    <div class="main">
+
+        <form action="" method="POST" class="form1" id="form-1">
+            <h3 class="heading">Đăng nhập</h3>
+
+            <div class="spacer"></div>
+
+            <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input id="email" name="email" type="text" placeholder="VD: email@domain.com" class="form-control">
+                <span class="form-message"></span>
             </div>
-        </div>
+
+            <div class="form-group">
+                <label for="password" class="form-label">Mật khẩu</label>
+                <input id="password" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control">
+                <span class="form-message"></span>
+            </div>
+            <button class="form-submit">Đăng Nhập</button>
+        </form>
+
     </div>
+
+
+
     <div id="pre-footer">
         <div class="wrapper">
             <div class="inner">
@@ -391,7 +269,28 @@
             </div>
         </div>
     </footer>
-    <script type="module" src="../JS/logic/product.js"></script>
+    <script src="../JS/validate.js"></script>
+    <script>
+
+        // Mong muốn của chúng ta
+        Validator({
+            form: '#form-1',
+            formGroupSelector: '.form-group',
+            errorSelector: '.form-message',
+            rules: [
+                Validator.isRequired('#email'),
+                Validator.isEmail('#email'),
+                Validator.minLength('#password', 6),
+                Validator.isRequired('#password_confirmation'),
+                Validator.isConfirm('#password_confirmation', function () {
+                    return document.querySelector('#form-1 #password').value;
+                }, 'Mật khẩu nhập lại không chính xác'),
+            ],
+            onSubmit: function (data) {
+                console.log(data);
+            }
+        });
+    </script>
     <script type="text/javascript" src="../JS/fix_header.js"></script>
 </body>
 
