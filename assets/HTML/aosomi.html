@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../CSS/pre-footer.css">
     <link rel="stylesheet" href="../CSS/footer.css">
     <link rel="stylesheet" href="../CSS/allProduct.css">
+    <link rel="stylesheet" href="../CSS/pagination.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -22,6 +23,24 @@
 </head>
 
 <body>
+    <template id="postTemplate">
+        <div class="gird-uniform__item large--one--third pd-left5">
+            <div class="product-item">
+                <div class="product-image">
+                    <img class="product-image-item" src="../img/dam.png" alt="">
+                    <div class="product-action">
+                        <div>
+                            <a href="" class="btn-tv">XEM THÊM</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item-info">
+                    <h4 class="image-title">Đầm thiết kế peplum D19832</h4>
+                    <span class="current-price">1,599,000₫</span>
+                </div>
+            </div>
+        </div>
+    </template>
     <header id="header">
         <div class="desktop-header">
             <div class="desktop-header-top">
@@ -239,7 +258,7 @@
                                 </div>
                             </div>
                             <div class="collection-body">
-                                <div class="gird-uniform product-list">
+                                <div class="gird-uniform product-list" id="product__List">
                                     <div class="gird-uniform__item large--one--third pd-left5">
                                         <div class="product-item">
                                             <div class="product-image">
@@ -256,23 +275,10 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="gird-uniform__item large--one--third pd-left5">
-                                        <div class="product-item">
-                                            <div class="product-image">
-                                                <img src="../img/so_mi_hoa_tiet_tay_bong.png" alt="">
-                                                <div class="product-action">
-                                                    <div>
-                                                        <a href="" class="btn-tv">XEM THÊM</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="product-item-info">
-                                                <h4 class="image-title">SƠ MI HỌA TIẾT TAY BỒNG SM04592</h4>
-                                                <span class="current-price">899,000₫</span>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
+                                <ul class="pagination" id="pagination">
+                                    <!-- Phân trang sẽ được hiển thị ở đây -->
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -385,6 +391,7 @@
             </div>
         </div>
     </footer>
+    <script type="module" src="../JS/logic/productShirt.js"></script>
     <script type="text/javascript" src="../JS/fix_header.js"></script>
 </body>
 

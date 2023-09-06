@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../CSS/pre-footer.css">
     <link rel="stylesheet" href="../CSS/footer.css">
     <link rel="stylesheet" href="../CSS/allProduct.css">
+    <link rel="stylesheet" href="../CSS/pagination.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -22,6 +23,24 @@
 </head>
 
 <body>
+    <template id="postTemplate">
+        <div class="gird-uniform__item large--one--third pd-left5">
+            <div class="product-item">
+                <div class="product-image">
+                    <img class="product-image-item" src="../img/dam.png" alt="">
+                    <div class="product-action">
+                        <div>
+                            <a href="" class="btn-tv">XEM THÊM</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item-info">
+                    <h4 class="image-title">Đầm thiết kế peplum D19832</h4>
+                    <span class="current-price">1,599,000₫</span>
+                </div>
+            </div>
+        </div>
+    </template>
     <header id="header">
         <div class="desktop-header">
             <div class="desktop-header-top">
@@ -167,7 +186,7 @@
                                             </ul>
                                         </li>
                                         <li class="hasmenu">
-                                            <a href="">Áo sơ mi</a>
+                                            <a href="./aosomi.html">Áo sơ mi</a>
                                             <ul class="no-bullets">
                                                 <li><a href="">Dài tay</a></li>
                                                 <li><a href="">Ngắn tay</a></li>
@@ -239,7 +258,7 @@
                                 </div>
                             </div>
                             <div class="collection-body">
-                                <div class="gird-uniform product-list">
+                                <div class="gird-uniform product-list" id="product__List">
                                     <div class="gird-uniform__item large--one--third pd-left5">
                                         <div class="product-item">
                                             <div class="product-image">
@@ -256,71 +275,10 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="gird-uniform__item large--one--third pd-left5">
-                                        <div class="product-item">
-                                            <div class="product-image">
-                                                <img src="../img/dam_hoa_tay.png" alt="">
-                                                <div class="product-action">
-                                                    <div>
-                                                        <a href="" class="btn-tv">XEM THÊM</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="product-item-info">
-                                                <h4 class="image-title">Đầm hoa tay lỡ d42812</h4>
-                                                <span class="current-price">599,000₫</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="gird-uniform__item large--one--third pd-left5">
-                                        <div class="product-item">
-                                            <div class="product-image">
-                                                <img src="../img/dam_midi_hoa.png" alt="">
-                                                <div class="product-action">
-                                                    <div>
-                                                        <a href="" class="btn-tv">XEM THÊM</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="product-item-info">
-                                                <h4 class="image-title">Đầm midi hoa d41022</h4>
-                                                <span class="current-price">599,000₫</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="gird-uniform__item large--one--third pd-left5">
-                                        <div class="product-item">
-                                            <div class="product-image">
-                                                <img src="../img/dam_ren_cao_cap.png" alt="">
-                                                <div class="product-action">
-                                                    <div>
-                                                        <a href="" class="btn-tv">XEM THÊM</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="product-item-info">
-                                                <h4 class="image-title">Đầm ren cao cấp d00162</h4>
-                                                <span class="current-price">1,399,000₫</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="gird-uniform__item large--one--third pd-left5">
-                                        <div class="product-item">
-                                            <div class="product-image">
-                                                <img src="../img/dam_tho_co_be.png" alt="">
-                                                <div class="product-action">
-                                                    <div>
-                                                        <a href="" class="btn-tv">XEM THÊM</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="product-item-info">
-                                                <h4 class="image-title">Đầm thô cổ bẻ d02712</h4>
-                                                <span class="current-price">1,299,000₫</span>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
+                                <ul class="pagination" id="pagination">
+                                    <!-- Phân trang sẽ được hiển thị ở đây -->
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -433,6 +391,7 @@
             </div>
         </div>
     </footer>
+    <script type="module" src="../JS/logic/productDress.js"></script>
     <script type="text/javascript" src="../JS/fix_header.js"></script>
 </body>
 
