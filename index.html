@@ -51,7 +51,7 @@
               <div class="grid__item size-two">
                 <div class="desktop-header-navbar">
                   <div class="inner">
-                    <ul>
+                    <ul class="ul-navbar">
                       <li class="dropdown">
                         <a href="./assets/HTML/allProduct.html">
                           Sản phẩm
@@ -78,7 +78,8 @@
                       <li>
                         <a href="/">Liên hệ</a>
                       </li>
-                      <li class="float-pc">
+
+                      <li class="float-pc" style="margin-left: 18px;">
                         <div class="desktop-cart-wrapper">
                           <a href="" style="padding: 0;">
                             <img src="./assets/img/cart.png" alt="cart">
@@ -92,7 +93,7 @@
                           </div>
                         </div>
                       </li>
-                      <li class="dropdown icon-item search-li float-pc">
+                      <li id="account" class="dropdown icon-item search-li float-pc">
                         <a href="#">
                           <img src="./assets/img/account.png" alt="account">
                           Tài khoản
@@ -114,6 +115,13 @@
                               <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
                           </form>
+                        </ul>
+                      </li>
+                      <li id="user-info" class="dropdown float-pc" style="display: none;">
+                        Xin chào, <span id="user-name"></span>
+                        <ul class="no-bullets" style="max-height: 104px;">
+                          <li><a href="#">Thông tin cá nhân</a></li>
+                          <li><a href="#" id="logout">Đăng xuất</a></li>
                         </ul>
                       </li>
                     </ul>
@@ -491,6 +499,20 @@
       </div>
     </div>
   </footer>
+  <script>
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+    if (isLoggedIn) {
+      document.getElementById("account").style.display = "none";
+      document.getElementById("user-info").style.display = "block";
+      document.getElementById("user-name").textContent = localStorage.getItem('email');
+    }
+    else {
+      document.getElementById("account").style.display = "block";
+      document.getElementById("user-info").style.display = "none";
+    }
+  </script>
+  <script src="./assets/JS/utils/logout.js"></script>
+  <script type="module" src="./assets/JS/utils/login.js"></script>
   <script type="text/javascript" src="./assets/JS/fix_header.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>

@@ -141,7 +141,7 @@
 
     <div class="main">
 
-        <form action="" method="POST" class="form1" id="form-1">
+        <form action="" method="POST" class="form1" id="form-register">
             <h3 class="heading">Đăng ký</h3>
 
             <div class="spacer"></div>
@@ -295,12 +295,13 @@
             </div>
         </div>
     </footer>
+    <script type="module" src="../JS/utils/register.js"></script>
     <script src="../JS/validate.js"></script>
     <script>
 
         // Mong muốn của chúng ta
         Validator({
-            form: '#form-1',
+            form: '#form-register',
             formGroupSelector: '.form-group',
             errorSelector: '.form-message',
             rules: [

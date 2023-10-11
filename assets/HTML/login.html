@@ -141,7 +141,7 @@
 
     <div class="main">
 
-        <form action="" method="POST" class="form1" id="form-1">
+        <form action="" method="POST" class="form1" id="form-login">
             <h3 class="heading">Đăng nhập</h3>
 
             <div class="spacer"></div>
@@ -157,7 +157,7 @@
                 <input id="password" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control">
                 <span class="form-message"></span>
             </div>
-            <button class="form-submit">Đăng Nhập</button>
+            <button type="submit" class="form-submit">Đăng Nhập</button>
         </form>
 
     </div>
@@ -269,12 +269,13 @@
             </div>
         </div>
     </footer>
-    <script src="../JS/validate.js"></script>
+    <script type="module" src="../JS/utils/login.js"></script>
+    <script type="text/javascript" src="../JS/validate.js"></script>
     <script>
 
         // Mong muốn của chúng ta
         Validator({
-            form: '#form-1',
+            form: '#form-login',
             formGroupSelector: '.form-group',
             errorSelector: '.form-message',
             rules: [
@@ -283,7 +284,7 @@
                 Validator.minLength('#password', 6),
                 Validator.isRequired('#password_confirmation'),
                 Validator.isConfirm('#password_confirmation', function () {
-                    return document.querySelector('#form-1 #password').value;
+                    return document.querySelector('#form-login #password').value;
                 }, 'Mật khẩu nhập lại không chính xác'),
             ],
             onSubmit: function (data) {

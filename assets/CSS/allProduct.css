@@ -5,9 +5,11 @@
     border-top: 1px solid #EFEFF4;
     border-bottom: 1px solid #EFEFF4;
 }
+
 .text-left {
     text-align: left !important;
 }
+
 #breadcrumb-wrapper .breadcrumb-content .breadcrumb-small {
     text-transform: uppercase;
 }
@@ -15,13 +17,16 @@
 #collection-wrapper {
     padding: 50px 0px;
 }
+
 #collection-wrapper .wrapper .inner .block-gird {
     display: flex;
     justify-content: space-between;
 }
+
 #collection-wrapper .wrapper .inner .block-gird .large--one {
     width: 25%;
 }
+
 #collection-wrapper .wrapper .inner .block-gird .large--three {
     width: 75%;
 }
@@ -44,7 +49,7 @@
     background: transparent;
 }
 
-#collection-wrapper .collection-categories .panel > ul > li > a {
+#collection-wrapper .collection-categories .panel>ul>li>a {
     color: #070707;
     font-weight: bold;
     cursor: pointer;
@@ -55,9 +60,11 @@
     font-size: 14px;
     line-height: 21px;
 }
+
 #collection-wrapper .collection-categories ul li.hasmenu {
     margin: 10px 0;
 }
+
 #collection-wrapper .collection-categories ul li a {
     color: #8A8A8F;
 }
@@ -70,6 +77,7 @@
 .block-gird-item .collection-head .block-gird .large--one {
     width: 33.333%;
 }
+
 .block-gird-item .collection-head .block-gird .large--two {
     width: 66.666%;
 }
@@ -88,6 +96,7 @@
     margin-bottom: 15px;
     margin-right: 22px;
 }
+
 #collection-wrapper .collection-head .collection-title h1 {
     margin: 0px;
     padding: 0px;
@@ -95,6 +104,7 @@
     line-height: 27px;
     color: #070707;
 }
+
 #collection-wrapper .collection-sidebar-wrapper button.accordion {
     color: #828282;
     font-weight: bold;
@@ -110,6 +120,66 @@
     line-height: 21px;
     background: transparent;
 }
+
+#collection-wrapper .collection-sidebar-wrapper button.accordion:after {
+    content: '\f0dd';
+    font-family: 'Font Awesome\ 5 Free';
+    font-weight: 900;
+    color: #828282;
+    position: absolute;
+    top: calc(50% - 12px);
+    right: -7px;
+    line-height: normal;
+    font-weight: bold;
+}
+
+.collection-sidebar-wrapper .sidebar-item {
+    position: relative;
+    width: auto;
+}
+
+@media (min-width: 1023px) {
+    .sidebar-uniform-flex>div .accordion.active+.panel {
+        border: 1px solid #cbcbcb;
+        min-width: 150px;
+        padding: 15px;
+        box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.2);
+    }
+}
+
+@media (min-width: 1023px) {
+    .sidebar-uniform-flex>div .panel {
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%);
+        z-index: 9999;
+        background: white;
+    }
+}
+
+button.accordion.active:after {
+    content: "\f0de";
+    top: 17px;
+}
+
+.sidebar-item .panel {
+    display: none;
+}
+
+
+
+.collection-sidebar-wrapper .sidebar-item .collection-filter-price div.panel {
+    min-width: 220px;
+}
+
+.collection-sidebar-wrapper .sidebar-item .collection-filter-price div.panel {
+    padding: 0 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    font-size: 14px;
+}
+
 #collection-wrapper .collection-sidebar-wrapper .collection-filter-size,
 #collection-wrapper .collection-sidebar-wrapper .collection-filter-color,
 #collection-wrapper .collection-sidebar-wrapper .collection-filter-price {
@@ -120,22 +190,26 @@
 .collection-body .gird-uniform .large--one--third {
     width: 33.333%;
 }
+
 .collection-body .gird-uniform {
     display: flex;
     flex-wrap: wrap;
 }
+
 .pd-left5 {
     padding-left: 5px;
 }
+
 .product-item .product-image {
     position: relative;
     overflow: hidden;
 }
 
-.product-item .product-image img{
+.product-item .product-image img {
     width: 100%;
     object-fit: cover;
 }
+
 .product-item .product-image .product-action {
     position: absolute;
     left: -100%;
@@ -152,7 +226,7 @@
     transition: transform 0.5s ease;
 }
 
-.product-item .product-image .product-action > div > a {
+.product-item .product-image .product-action>div>a {
     width: 100%;
     background: transparent;
     color: #fff;
@@ -161,6 +235,7 @@
     padding: 8px 38px;
     margin-bottom: 10px;
 }
+
 .product-item .product-image:hover .product-action {
     transform: translateX(100%);
 }
@@ -172,6 +247,7 @@
 .product-item .product-item-info {
     padding: 20px;
 }
+
 .product-item .product-image .product-action a:hover {
     background: #fff;
     color: #070707;
