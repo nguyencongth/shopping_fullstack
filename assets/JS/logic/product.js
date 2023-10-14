@@ -2,7 +2,7 @@ import productApi from "../api/productAPI";
 import { renderProductList } from "../utils/productRender";
 import { renderPagination } from "../utils/renderPagination";
 
-const itemsPerPage = 12; // Số mục trên mỗi trang
+const itemsPerPage = 9; // Số mục trên mỗi trang
 
 // Hàm để lấy và hiển thị dữ liệu từ trang cụ thể
 async function getDataForPage(page) {
