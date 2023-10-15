@@ -6,6 +6,11 @@
     border-bottom: 1px solid #EFEFF4;
 }
 
+#breadcrumb-wrapper a,
+#breadcrumb-wrapper span {
+    text-transform: uppercase;
+}
+
 .text-left {
     text-align: left !important;
 }
@@ -181,4 +186,8 @@
     width: 100%;
     margin-bottom: 10px;
     text-transform: uppercase;
+}
+
+.product-short-detail {
+    white-space: pre-line;
 }

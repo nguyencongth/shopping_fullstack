@@ -20,6 +20,15 @@ export function createProductElement(product) {
   if (image_title) image_title.textContent = product.tensp;
   if (current_price) current_price.textContent = VND.format(product.giaban);
 
+  if(productItem) {
+    productItem.addEventListener("click",()=>{
+      console.log(product.idsp);
+      setTimeout(()=>{
+        window.location.assign(`/assets/HTML/productDetail.html?id=${product.idsp}`);
+      }, 200)
+    })
+  }
+
   return productItem;
 }
 

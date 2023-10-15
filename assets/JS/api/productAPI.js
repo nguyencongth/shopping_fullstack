@@ -15,6 +15,10 @@ const productApi = {
     const params = { page, pageSize };
     return axiosClient.get(url, { params });
   },
+  getProductById(id) {
+    const url = `/api/Product/getProductId?idsp=${id}`
+    return axiosClient.get(url);
+  },
 };
 
 export default productApi;
