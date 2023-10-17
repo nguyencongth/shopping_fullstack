@@ -45,7 +45,8 @@ img {
     object-fit: cover;
 }
 
-input {
+input,
+textarea {
     border: 1px solid #e7e7e7;
     max-width: 100%;
     padding: 8px 10px;
@@ -79,4 +80,11 @@ input {
 
 html {
     scroll-behavior: smooth;
+}
+
+td,
+th {
+    text-align: left;
+    padding: 15px;
+    border: 1px solid #e7e7e7;
 }
