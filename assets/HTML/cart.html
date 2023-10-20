@@ -22,22 +22,30 @@
 
 <body>
     <template id="postTemplate">
-        <div class="gird-uniform__item large--one--third pd-left5">
-            <div class="product-item">
-                <div class="product-image">
-                    <img class="product-image-item" src="../img/dam.png" alt="">
-                    <div class="product-action">
-                        <div>
-                            <a href="#" class="btn-tv">XEM THÊM</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-item-info">
-                    <h4 class="image-title">Đầm thiết kế peplum D19832</h4>
-                    <span class="current-price">1,599,000₫</span>
-                </div>
-            </div>
-        </div>
+        <tr class="cart_row">
+            <td>
+                <a href="" class="cart_image">
+                    <img id="img" src="../img/ao_thiet_ke.png" alt="Áo thiết kế">
+                </a>
+            </td>
+            <td class="cart-product-title">
+                <a id="nameProduct" href="" class="h4">Áo thiết kế D09212</a>
+                <p>Phiên bản: Size 4</p>
+                <p>Thương hiệu: 2T</p>
+                <a href="" class="cart_remove">
+                    <small>Xóa</small>
+                </a>
+            </td>
+            <td class="cart-product-price">
+                <span id="priceProduct" class="h3">1.500.000</span>
+            </td>
+            <td>
+                <input type="number" name="quantity" id="quantity" value="1" min="0">
+            </td>
+            <td class="cart-product-price text-right">
+                <span id="totalPrice" class="h3">1.500.000</span>
+            </td>
+        </tr>
     </template>
     <header id="header">
         <div class="desktop-header">
@@ -113,7 +121,7 @@
                                                     <a href="" style="padding: 0;">
                                                         <img src="../img/cart.png" alt="cart">
                                                         Giỏ hàng
-                                                        <span class="hd-cart-count">0</span>
+                                                        <span id="quantityCartItem" class="hd-cart-count">0</span>
                                                     </a>
                                                     <div class="quickview-cart">
                                                         <ul class="no-bullets">
@@ -178,7 +186,7 @@
                                     <th class="text-right">Tổng tiền</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="table_cartItems">
                                 <tr class="cart_row">
                                     <td>
                                         <a href="" class="cart_image">
@@ -213,7 +221,7 @@
                             <div class="flex-box-item text-right one-third">
                                 <p>
                                     <span class="cart_subtotal-title">Tổng tiền:</span>
-                                    <span class="h3 cart-subtotal">1.500.000</span>
+                                    <span id="totalAmount" class="h3 cart-subtotal">1.500.000</span>
                                 </p>
                                 <button type="submit" name="update" class="btnCart update-cart">Cập nhật</button>
                                 <button type="submit" name="checkout" class="btnCart">Thanh toán</button>
@@ -341,9 +349,9 @@
             document.getElementById("user-info").style.display = "none";
         }
     </script>
+    <script type="module" src="../JS/logic/cart.js"></script>
     <script src="../JS/utils/logout.js"></script>
     <script type="module" src="../JS/utils/login.js"></script>
-    <script type="module" src="../JS/logic/product.js"></script>
     <script type="text/javascript" src="../JS/fix_header.js"></script>
     <script src="../JS/model.js"></script>
 </body>
