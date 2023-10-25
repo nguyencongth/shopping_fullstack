@@ -176,7 +176,7 @@
             <div class="wrapper">
                 <div class="inner">
                     <h1>Giỏ Hàng</h1>
-                    <form action="/cart" method="post" class="cart table-wrap">
+                    <form id="form-cart" action="" method="post" class="cart table-wrap">
                         <table class="cart-table full">
                             <thead class="cart_row">
                                 <tr>
@@ -190,25 +190,25 @@
                                 <tr class="cart_row">
                                     <td>
                                         <a href="" class="cart_image">
-                                            <img src="../img/ao_thiet_ke.png" alt="Áo thiết kế">
+                                            <img src="" alt="">
                                         </a>
                                     </td>
                                     <td class="cart-product-title">
-                                        <a href="" class="h4">Áo thiết kế D09212</a>
-                                        <p>Phiên bản: Size 4</p>
-                                        <p>Thương hiệu: 2T</p>
+                                        <a href="" class="h4"></a>
+                                        <p></p>
+                                        <p></p>
                                         <a href="" class="cart_remove">
-                                            <small>Xóa</small>
+                                            <small></small>
                                         </a>
                                     </td>
                                     <td class="cart-product-price">
-                                        <span class="h3">1.500.000</span>
+                                        <span class="h3"></span>
                                     </td>
                                     <td>
-                                        <input type="number" name="quantity" id="quantity" value="1" min="0">
+                                        <!-- <input type="number" name="quantity" id="quantity" value="" min="0"> -->
                                     </td>
                                     <td class="cart-product-price text-right">
-                                        <span class="h3">1.500.000</span>
+                                        <span class="h3"></span>
                                     </td>
                                 </tr>
                             </tbody>
@@ -221,10 +221,12 @@
                             <div class="flex-box-item text-right one-third">
                                 <p>
                                     <span class="cart_subtotal-title">Tổng tiền:</span>
-                                    <span id="totalAmount" class="h3 cart-subtotal">1.500.000</span>
+                                    <span id="totalAmount" class="h3 cart-subtotal"></span>
                                 </p>
-                                <button type="submit" name="update" class="btnCart update-cart">Cập nhật</button>
-                                <button type="submit" name="checkout" class="btnCart">Thanh toán</button>
+                                <button type="submit" id="btnUpdateCartItem" name="update"
+                                    class="btnCart update-cart">Cập nhật</button>
+                                <button type="submit" id="btnPayment" name="checkout" class="btnCart">Thanh
+                                    toán</button>
                             </div>
                         </div>
                     </form>

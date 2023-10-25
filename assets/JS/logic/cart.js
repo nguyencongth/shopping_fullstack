@@ -32,6 +32,18 @@ function createCartItemElement(cartItem) {
     if (priceProduct) priceProduct.textContent = VND.format(cartItem.giaban);
     if (quantity) quantity.value = cartItem.quantity;
     if (totalPrice) totalPrice.textContent = VND.format(cartItem.giaban * cartItem.quantity);
+
+    const btnDeleteCartItem = Element.querySelector(".cart_remove");
+    btnDeleteCartItem.addEventListener('click', async (e) =>{
+        e.preventDefault();
+        try {
+            await cartAPI.deleteCartItem(cartItem.id_customer, cartItem.idsp);
+            getCartItems();
+        } catch (error) {
+            console.log("Error deleting cart item", error);
+        }
+    })
+
   
     return Element;
 }
@@ -62,7 +74,42 @@ function renderCartItem(elementId, cartItems) {
     });
 }
 
+// đếm số lượng sp trong giỏ hàng
 const quantityCartItem = document.querySelector("#quantityCartItem");
 const {arrayCart} = await cartAPI.getCartItem(id_customer);
 const totalQuantityCartItem = arrayCart.length;
 quantityCartItem.textContent = totalQuantityCartItem;
+
+// Chuyển trang
+const btnPayment = document.querySelector("#btnPayment");
+console.log(btnPayment);
+btnPayment.addEventListener("click", (e) =>{
+    e.preventDefault();
+    window.location.assign("./shippingAndPayment.html");
+})
+
+// update quantity cart item
+const btnUpdate = document.querySelector("#btnUpdateCartItem");
+btnUpdate.addEventListener("click", async (e) =>{
+    e.preventDefault();
+    const newQuantity = document.querySelector("#quantity").value;
+    const productIDs = arrayCart.map(item =>item.idsp);
+    const data = productIDs.map(idsp => ({
+        cartID: 0,
+        id_customer: parseInt(id_customer),
+        idsp: idsp,
+        idloaisp: 0,
+        anhsp: "string",
+        tensp: "string",
+        giaban: 0,
+        quantity: parseInt(newQuantity),
+        dateAdded: "2023-10-25T17:07:05.307Z"
+    }))
+    try {
+        await cartAPI.updateCartItemQuantity(data);
+        getCartItems();
+    } catch (error) {
+        console.log("Error updating", error);
+    }
+    
+});
