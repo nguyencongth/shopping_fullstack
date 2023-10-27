@@ -24,8 +24,8 @@ $(document).ready(function () {
         },
       },
     ],
-    // autoplay: true,
-    // autoplaySpeed: 1000,
+    autoplay: true,
+    autoplaySpeed: 2000,
   });
 });
 
@@ -55,7 +55,7 @@ $(document).ready(function () {
         },
       },
     ],
-    // autoplay: true,
-    // autoplaySpeed: 1000,
+    autoplay: true,
+    autoplaySpeed: 2000,
   });
 });

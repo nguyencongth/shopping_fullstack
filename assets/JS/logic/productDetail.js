@@ -35,7 +35,7 @@ function AddToCart(product) {
             dateAdded: "2023-10-20T17:01:46.598Z",
         }
         await cartAPI.addCartItem(data);
-        // window.location.assign("./cart.html");
+        window.location.assign("./cart.html");
     })
 }
 

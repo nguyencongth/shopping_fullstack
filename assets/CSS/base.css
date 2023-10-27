@@ -88,3 +88,9 @@ th {
     padding: 15px;
     border: 1px solid #e7e7e7;
 }
+
+.product-image-class {
+    object-fit: cover;
+    width: 50px;
+    margin-right: 12px;
+}

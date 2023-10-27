@@ -16,9 +16,9 @@ const cartAPI = {
     const url = `/api/Cart/deleteCartItem?customerID=${customerID}&productID=${productID}`;
     return axiosClient.delete(url);
   },
-  updateCartItemQuantity(data) {
-    const url = "/api/Cart/updateCartQuantity"
-    return axiosClient.patch(url, data);
+  updateCartItemQuantity(id_customer, idsp, newQuantity) {
+    const url = `/api/Cart/updateCartQuantity?id_customer=${id_customer}&idsp=${idsp}&newQuantity=${newQuantity}`
+    return axiosClient.patch(url);
   }
 };
 

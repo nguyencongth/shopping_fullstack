@@ -4,7 +4,9 @@ const VND = new Intl.NumberFormat('vi-VN', {
     style: 'currency',
     currency: 'VND',
 });
+
 const id_customer = localStorage.getItem("login_id");
+
 async function getCartItems() {
     const {arrayCart} = await cartAPI.getCartItem(id_customer);
     renderCartItem('table_cartItems', arrayCart);
@@ -39,6 +41,7 @@ function createCartItemElement(cartItem) {
         try {
             await cartAPI.deleteCartItem(cartItem.id_customer, cartItem.idsp);
             getCartItems();
+            countProductCart();
         } catch (error) {
             console.log("Error deleting cart item", error);
         }
@@ -48,6 +51,7 @@ function createCartItemElement(cartItem) {
     return Element;
 }
 
+// Calculate the total cost of products in the shopping cart
 function TotalAmount(cartItems) {
     if (!Array.isArray(cartItems)) return;
     let totalQuantity = 0;
@@ -61,6 +65,7 @@ function TotalAmount(cartItems) {
     elementTotalAmount.textContent = VND.format(totalAmount);
 }
 
+// Render cart items
 function renderCartItem(elementId, cartItems) {
     if (!Array.isArray(cartItems)) return;
     const Element = document.getElementById(elementId);
@@ -74,13 +79,41 @@ function renderCartItem(elementId, cartItems) {
     });
 }
 
-// đếm số lượng sp trong giỏ hàng
-const quantityCartItem = document.querySelector("#quantityCartItem");
+// Count the number of products in the shopping cart and display products
+async function countProductCart() {
+    const quantityCartItem = document.querySelector("#quantityCartItem");
+const cartList = document.querySelector(".quickview-cart ul");
 const {arrayCart} = await cartAPI.getCartItem(id_customer);
 const totalQuantityCartItem = arrayCart.length;
-quantityCartItem.textContent = totalQuantityCartItem;
 
-// Chuyển trang
+if (totalQuantityCartItem > 0) {
+    quantityCartItem.textContent = totalQuantityCartItem;
+    cartList.innerHTML = "";
+    arrayCart.forEach(item => {
+        const listItem = document.createElement("li");
+
+        const productImage = document.createElement("img");
+        productImage.src = item.anhsp;
+        productImage.classList.add('product-image-class');
+
+        const productName = document.createElement("span");
+        productName.textContent = item.tensp;
+
+        listItem.appendChild(productImage);
+        listItem.appendChild(productName);
+
+        cartList.appendChild(listItem);
+    });
+} else {
+    quantityCartItem.textContent = 0;
+    cartList.innerHTML = "<li>Bạn chưa có sản phẩm nào trong giỏ hàng!</li>";
+    }
+}
+countProductCart()
+
+
+
+// Next page
 const btnPayment = document.querySelector("#btnPayment");
 console.log(btnPayment);
 btnPayment.addEventListener("click", (e) =>{
@@ -90,26 +123,22 @@ btnPayment.addEventListener("click", (e) =>{
 
 // update quantity cart item
 const btnUpdate = document.querySelector("#btnUpdateCartItem");
-btnUpdate.addEventListener("click", async (e) =>{
+btnUpdate.addEventListener("click", async (e) => {
     e.preventDefault();
-    const newQuantity = document.querySelector("#quantity").value;
-    const productIDs = arrayCart.map(item =>item.idsp);
-    const data = productIDs.map(idsp => ({
-        cartID: 0,
-        id_customer: parseInt(id_customer),
-        idsp: idsp,
-        idloaisp: 0,
-        anhsp: "string",
-        tensp: "string",
-        giaban: 0,
-        quantity: parseInt(newQuantity),
-        dateAdded: "2023-10-25T17:07:05.307Z"
-    }))
     try {
-        await cartAPI.updateCartItemQuantity(data);
-        getCartItems();
+        const inputs = document.querySelectorAll(".quantity-input");
+        const data = [];
+        for(let i = 0; i < arrayCart.length; i++) {
+            const newQuantity = inputs[i].value;
+            const item = arrayCart[i];
+            data.push({
+                idsp: item.idsp,
+                newQuantity: newQuantity
+            })
+            await Promise.all(data.map(item => cartAPI.updateCartItemQuantity(id_customer, item.idsp, item.newQuantity)));
+            getCartItems();
+        }
     } catch (error) {
         console.log("Error updating", error);
     }
-    
 });

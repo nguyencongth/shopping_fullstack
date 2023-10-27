@@ -115,11 +115,13 @@
                                                     <a href="" style="padding: 0;">
                                                         <img src="../img/cart.png" alt="cart">
                                                         Giỏ hàng
-                                                        <span class="hd-cart-count">0</span>
+                                                        <span id="quantityCartItem" class="hd-cart-count">0</span>
                                                     </a>
                                                     <div class="quickview-cart">
                                                         <ul class="no-bullets">
-                                                            <li>Bạn chưa có sản phẩm nào trong giỏ hàng!</li>
+                                                            <li style="display: flex;">
+                                                                Bạn chưa có sản phẩm nào trong giỏ hàng!
+                                                            </li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -466,6 +468,7 @@
     <script src="../JS/utils/logout.js"></script>
     <script type="module" src="../JS/utils/login.js"></script>
     <script type="module" src="../JS/logic/product.js"></script>
+    <script type="module" src="../JS/logic/cart.js"></script>
     <script type="text/javascript" src="../JS/fix_header.js"></script>
     <script src="../JS/model.js"></script>
 </body>
