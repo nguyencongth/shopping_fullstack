@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>ÁO SƠ MI - 2T FASHION</title>
+    <title>Kết quả tìm kiếm - 2T-STORE</title>
     <link rel="icon" type="image/x-icon" href="../img/logo-2T.png">
 </head>
 
@@ -27,7 +27,7 @@
         <div class="gird-uniform__item large--one--third pd-left5">
             <div class="product-item">
                 <div class="product-image">
-                    <img class="product-image-item" src="../img/dam.png" alt="">
+                    <img class="product-image-item" src="../img/dam.png" alt="" loading="lazy">
                     <div class="product-action">
                         <div>
                             <a href="#" class="btn-tv">XEM THÊM</a>
@@ -78,7 +78,7 @@
                                                 <ul style="max-height: 320px;">
                                                     <li><a href="./dam.html">Đầm</a></li>
                                                     <li><a href="./aosomi.html">Áo sơ mi</a></li>
-                                                    <li><a href="./aosomi.html">Áo phông</a></li>
+                                                    <li><a href="">Áo phông</a></li>
                                                     <li><a href="">Quần</a></li>
                                                     <li><a href="">Chân váy</a></li>
                                                     <li><a href="">Set bộ</a></li>
@@ -112,14 +112,16 @@
                                             </li>
                                             <li class="float-pc">
                                                 <div class="desktop-cart-wrapper">
-                                                    <a href="" style="padding: 0;">
+                                                    <a href="./cart.html" style="padding: 0;">
                                                         <img src="../img/cart.png" alt="cart">
                                                         Giỏ hàng
                                                         <span id="quantityCartItem" class="hd-cart-count">0</span>
                                                     </a>
                                                     <div class="quickview-cart">
                                                         <ul class="no-bullets">
-                                                            <li>Bạn chưa có sản phẩm nào trong giỏ hàng!</li>
+                                                            <li style="display: flex;">
+                                                                Bạn chưa có sản phẩm nào trong giỏ hàng!
+                                                            </li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -158,16 +160,11 @@
                     <div class="breadcrumb-small">
                         <a href="../../index.html">Trang chủ</a>
                         <span>/</span>
-                        <span>ÁO SƠ MI</span>
+                        <span>TÌM KIẾM</span>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div id="banner" class="">
-        <a href="">
-            <img src="../img/banner_allproduct.png" alt="" width="100%">
-        </a>
     </div>
     <div id="collection-wrapper">
         <div class="wrapper">
@@ -230,7 +227,7 @@
                                 <div class="block-gird">
                                     <div class="block-gird-item large--one">
                                         <div class="collection-title">
-                                            <h1>ÁO SƠ MI</h1>
+                                            <h1>KẾT QUẢ TÌM KIẾM</h1>
                                         </div>
                                     </div>
                                     <div class="block-gird-item large--two">
@@ -253,9 +250,62 @@
                                                     </div>
                                                     <div class="sidebar-item">
                                                         <div class="collection-filter-price">
-                                                            <button class="accordion">
+                                                            <button class="accordion active">
                                                                 <span>Giá</span>
                                                             </button>
+                                                            <div class="panel sidebar-sort" style="max-height: 185px;">
+                                                                <ul class="no-bullets filter-price">
+                                                                    <li>
+                                                                        <label for="radio1">
+                                                                            <input type="radio" id="radio1"
+                                                                                name="price-filter">
+                                                                            <span>Tất cả</span>
+                                                                        </label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <label for="radio2">
+                                                                            <input type="radio" id="radio2"
+                                                                                name="price-filter">
+                                                                            <span>Nhỏ hơn 500,000₫</span>
+                                                                        </label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <label for="radio3">
+                                                                            <input type="radio" id="radio3"
+                                                                                name="price-filter">
+                                                                            <span>Từ 500,000₫ - 1,000,000₫</span>
+                                                                        </label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <label for="radio4">
+                                                                            <input type="radio" id="radio4"
+                                                                                name="price-filter">
+                                                                            <span>Từ 1,000,000₫ - 1,500,000₫</span>
+                                                                        </label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <label for="radio5">
+                                                                            <input type="radio" id="radio5"
+                                                                                name="price-filter">
+                                                                            <span>Từ 1,500,000₫ - 2,000,000₫</span>
+                                                                        </label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <label for="radio6">
+                                                                            <input type="radio" id="radio6"
+                                                                                name="price-filter">
+                                                                            <span>Từ 2,000,000₫ - 3,000,000₫</span>
+                                                                        </label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <label for="radio7">
+                                                                            <input type="radio" id="radio7"
+                                                                                name="price-filter">
+                                                                            <span>Lớn hơn 3,000,000₫</span>
+                                                                        </label>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -269,16 +319,16 @@
                                     <div class="gird-uniform__item large--one--third pd-left5">
                                         <div class="product-item">
                                             <div class="product-image">
-                                                <img src="../img/somitrang.png" alt="">
+                                                <img src="../img/dam.png" alt="" loading="lazy">
                                                 <div class="product-action">
                                                     <div>
-                                                        <a href="" class="btn-tv">XEM THÊM</a>
+                                                        <a href="./productDetail.html" class="btn-tv">XEM THÊM</a>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="product-item-info">
-                                                <h4 class="image-title">SƠ MI TRẮNG SM40712</h4>
-                                                <span class="current-price">399,000₫</span>
+                                                <h4 class="image-title">Đầm thiết kế peplum D19832</h4>
+                                                <span class="current-price">1,599,000₫</span>
                                             </div>
                                         </div>
                                     </div>
@@ -413,9 +463,10 @@
     <script src="../JS/utils/logout.js"></script>
     <script type="module" src="../JS/utils/login.js"></script>
     <script type="module" src="../JS/logic/searchProduct.js"></script>
+    <script type="module" src="../JS/logic/resultSearch.js"></script>
     <script type="module" src="../JS/logic/cart.js"></script>
-    <script type="module" src="../JS/logic/productShirt.js"></script>
     <script type="text/javascript" src="../JS/fix_header.js"></script>
+    <script src="../JS/model.js"></script>
 </body>
 
 </html>

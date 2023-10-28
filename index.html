@@ -8,8 +8,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" /> -->
   <link rel="stylesheet" href="./assets/CSS/slick.css">
+  <link rel="stylesheet" href="./assets/JS/slick-1.8.1/slick/slick.css">
   <link rel="stylesheet" href="./assets/CSS/base.css">
   <link rel="stylesheet" href="./assets/CSS/header.css">
   <link rel="stylesheet" href="./assets/CSS/home.css">
@@ -83,9 +84,9 @@
                         </a>
                         <ul class="no-bullets">
                           <form action="" method="get" class="search-bar">
-                            <input type="search" name="search" value="" placeholder="Tìm kiếm..."
+                            <input id="inputSearch" type="search" name="search" value="" placeholder="Tìm kiếm..."
                               class="input-group-filed">
-                            <button type="submit" class="btn">
+                            <button id="btnSearch" type="submit" class="btn">
                               <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
                           </form>
@@ -110,7 +111,7 @@
                           <img src="./assets/img/account.png" alt="account">
                           Tài khoản
                         </a>
-                        <ul class="no-bullets" style="max-height: 104px;">
+                        <ul class="no-bullets" style="max-height: 106px;">
                           <li><a href="./assets/HTML/login.html">Đăng nhập</a></li>
                           <li><a href="./assets/HTML/register.html">Đăng ký</a></li>
                         </ul>
@@ -118,8 +119,9 @@
 
                       <li id="user-info" class="dropdown float-pc" style="display: none;">
                         Xin chào, <span id="user-name"></span>
-                        <ul class="no-bullets" style="max-height: 104px;">
+                        <ul class="no-bullets" style="max-height: 161px;">
                           <li><a href="#">Thông tin cá nhân</a></li>
+                          <li><a href="#">Đơn hàng</a></li>
                           <li><a href="#" id="logout">Đăng xuất</a></li>
                         </ul>
                       </li>
@@ -514,12 +516,15 @@
   </script>
   <script src="./assets/JS/utils/logout.js"></script>
   <script type="module" src="./assets/JS/utils/login.js"></script>
+  <script type="module" src="./assets/JS/logic/searchProduct.js"></script>
   <script type="module" src="./assets/JS/logic/cart.js"></script>
   <script type="text/javascript" src="./assets/JS/fix_header.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+  <script src="./assets/JS/slick-1.8.1/slick/slick.min.js"></script>
   <script src="./assets/JS/slick.js"></script>
+  <script type="module" src="./assets/JS/index.js"></script>
   <script>
     // Get the button
     let mybutton = document.getElementById("myBtn");

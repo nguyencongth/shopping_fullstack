@@ -154,6 +154,7 @@ textarea.input-full {
     background: #070707;
     padding: 10px 30px;
     border-radius: 100px;
+    cursor: pointer;
     text-transform: uppercase;
     font-weight: bold;
 }

@@ -1,5 +1,6 @@
 import cartAPI from "../api/cartAPI";
 import productApi from "../api/productAPI";
+import { toast } from "../utils/toast";
 
 function renderProductDetails(product) {
     const VND = new Intl.NumberFormat('vi-VN', {
@@ -35,7 +36,10 @@ function AddToCart(product) {
             dateAdded: "2023-10-20T17:01:46.598Z",
         }
         await cartAPI.addCartItem(data);
-        window.location.assign("./cart.html");
+        toast.success("Thêm sản phẩm vào giỏ hàng thành công");
+        setTimeout(() => {
+            window.location.assign("./cart.html");
+        },1000)
     })
 }
 

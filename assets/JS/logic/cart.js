@@ -115,7 +115,6 @@ countProductCart()
 
 // Next page
 const btnPayment = document.querySelector("#btnPayment");
-console.log(btnPayment);
 btnPayment.addEventListener("click", (e) =>{
     e.preventDefault();
     window.location.assign("./shippingAndPayment.html");

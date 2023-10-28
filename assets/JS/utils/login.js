@@ -1,4 +1,5 @@
 import userAPI from "../api/userAPI";
+import { toast } from "./toast";
 function Login() {
     const formSubmit = document.getElementById("form-login");
     formSubmit.addEventListener("submit", async (e) => {
@@ -6,9 +7,6 @@ function Login() {
     
         const email = formSubmit.querySelector("#email").value;
         const password = formSubmit.querySelector("#password").value;
-
-        console.log(email);
-        console.log(password);
 
         const data =  {
             email,
@@ -21,9 +19,13 @@ function Login() {
                 localStorage.setItem('isLoggedIn', true);
                 localStorage.setItem('login_id', res.id_customer);
                 localStorage.setItem('email', email);
+                toast.success("Đăng nhập thành công");
                 setTimeout(()=>{
-                    window.location.assign('http://localhost:5173/index.html');
+                    window.location.assign('/index.html');
                 },1000)
+            }
+            else {
+                toast.error("Đăng nhập thất bại");
             }
         }
         catch(err) {
