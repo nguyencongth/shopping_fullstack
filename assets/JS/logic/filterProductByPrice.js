@@ -2,14 +2,15 @@ import productApi from "../api/productAPI";
 import { renderProductList } from "../utils/productRender";
 import { renderPagination } from "../utils/renderPagination";
 
-const itemsPerPage = 9; // Số mục trên mỗi trang
+const itemsPerPage = 9;
 
 // Hàm để lấy và hiển thị dữ liệu từ trang cụ thể
 async function getDataForPage(page, priceRange) {
-    try {
-        const startIndex = (page - 1) * itemsPerPage; // Tính toán vị trí bắt đầu
 
-        const { arrayProduct, pagination } = await productApi.getAll(
+    try {
+        const startIndex = (page - 1) * itemsPerPage;
+
+        const { arrayProduct, pagination } = await productApi.filterProductsByPrice(
             priceRange,
             page,
             itemsPerPage
@@ -36,5 +37,15 @@ priceFilterOptions.forEach(option => {
 
     });
 });
+
+// async function filterProductsByPrice(priceRange) {
+//     try {
+//         const {arrayProduct} = await productApi.filterProductsByPrice(priceRange);
+//         renderProductList("product__List", arrayProduct);
+//     } catch (error) {
+//         console.log("Failed to filter products by price", error);
+//     }
+// }
+
 // Khởi đầu: Lấy dữ liệu cho trang đầu tiên
 getDataForPage(1,1);

@@ -1,29 +1,23 @@
-// const Btns = document.querySelectorAll('.accordion')
-// const modal = document.querySelector('.sidebar-sort')
+const Btn = document.querySelector('#btn-filter-price');
+const panel = document.querySelector('#model');
+const btnUp = document.querySelector('.btn-up');
+const btnDown = document.querySelector('.btn-down');
 
-// function show(){
-//     if(modal.style.display == 'none'){
-//         modal.classList.add('open')
-//     } else {
-//         modal.classList.remove('open')
-//     }
-// }
 
-// for (const Btn of Btns) {
-//     Btn.addEventListener('click', show)
-// }
+panel.style.display = "none";
+btnUp.style.display = "none";
+btnDown.style.display = "inline-block";
 
-function showHide() {
-    const panel = document.querySelector('.sidebar-sort')
+Btn.addEventListener('click', (e) => {
+    e.preventDefault();
+
     if (panel.style.display === "none") {
         panel.style.display = "block";
+        btnUp.style.display = "inline-block";
+        btnDown.style.display = "none";
     } else {
         panel.style.display = "none";
+        btnUp.style.display = "none";
+        btnDown.style.display = "inline-block";
     }
-}
-
-const Btns = document.querySelectorAll('.accordion')
-
-for (const Btn of Btns) {
-    Btn.addEventListener('click', showHide)
-}
+});

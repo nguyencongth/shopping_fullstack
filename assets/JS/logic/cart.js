@@ -125,6 +125,7 @@ const btnUpdate = document.querySelector("#btnUpdateCartItem");
 btnUpdate.addEventListener("click", async (e) => {
     e.preventDefault();
     try {
+        const {arrayCart} = await cartAPI.getCartItem(id_customer);
         const inputs = document.querySelectorAll(".quantity-input");
         const data = [];
         for(let i = 0; i < arrayCart.length; i++) {

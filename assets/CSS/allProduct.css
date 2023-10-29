@@ -121,18 +121,6 @@
     background: transparent;
 }
 
-#collection-wrapper .collection-sidebar-wrapper button.accordion:after {
-    content: '\f0dd';
-    font-family: 'Font Awesome\ 5 Free';
-    font-weight: 900;
-    color: #828282;
-    position: absolute;
-    top: calc(50% - 12px);
-    right: -7px;
-    line-height: normal;
-    font-weight: bold;
-}
-
 .collection-sidebar-wrapper .sidebar-item {
     position: relative;
     width: auto;
@@ -141,7 +129,6 @@
 @media (min-width: 1023px) {
     .sidebar-uniform-flex>div .accordion.active+.panel {
         border: 1px solid #cbcbcb;
-        min-width: 150px;
         padding: 15px;
         box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.2);
     }
@@ -150,31 +137,43 @@
 @media (min-width: 1023px) {
     .sidebar-uniform-flex>div .panel {
         position: absolute;
-        right: 50%;
+        right: 100%;
         transform: translateX(50%);
         z-index: 9999;
-        background: white;
+        background-color: white;
     }
 }
 
-button.accordion.active:after {
-    content: "\f0de";
+.accordion .btn-up {
+    position: absolute;
     top: 17px;
+    right: -7px;
 }
 
-.sidebar-item .panel {
-    display: none;
+.accordion .btn-down {
+    position: absolute;
+    top: calc(50% - 12px);
+    right: -7px;
 }
 
+.panel ul {
+    margin: 0;
+}
 
+.panel li {
+    margin-bottom: 5px;
+}
+
+.panel li:last-child {
+    margin-bottom: 0;
+}
 
 .collection-sidebar-wrapper .sidebar-item .collection-filter-price div.panel {
     min-width: 220px;
 }
 
 .collection-sidebar-wrapper .sidebar-item .collection-filter-price div.panel {
-    padding: 0 10px;
-    max-height: 0;
+    padding: 10px 14px;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
     font-size: 14px;

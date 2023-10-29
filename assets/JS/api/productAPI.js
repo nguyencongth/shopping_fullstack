@@ -1,8 +1,8 @@
 import axiosClient from "./axiosClient";
 const productApi = {
-  getAll(page, pageSize) {
+  getAll(priceRange,page, pageSize) {
     const url = "/api/Product/all";
-    const params = { page, pageSize };
+    const params = {priceRange, page, pageSize };
     return axiosClient.get(url, { params });
   },
   getProductsDress(page, pageSize) {
@@ -21,6 +21,10 @@ const productApi = {
   },
   searchProduct(keyword, page, pageSize) {
     const url = `/api/Product/searchProduct?keyword=${keyword}&page=${page}&pageSize=${pageSize}`;
+    return axiosClient.get(url);
+  },
+  filterProductsByPrice(priceRange, page, pageSize) {
+    const url = `/api/Product/filterProductsByPrice?priceRange=${priceRange}&page=${page}&pageSize=${pageSize}`;
     return axiosClient.get(url);
   },
 };
