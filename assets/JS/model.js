@@ -4,11 +4,12 @@ const btnUp = document.querySelector('.btn-up');
 const btnDown = document.querySelector('.btn-down');
 
 
-panel.style.display = "none";
-btnUp.style.display = "none";
-btnDown.style.display = "inline-block";
+if(panel) panel.style.display = "none";
+if(btnUp) btnUp.style.display = "none";
+if(btnDown) btnDown.style.display = "inline-block";
 
-Btn.addEventListener('click', (e) => {
+
+Btn?.addEventListener('click', (e) => {
     e.preventDefault();
 
     if (panel.style.display === "none") {

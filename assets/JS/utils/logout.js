@@ -4,5 +4,5 @@ document.getElementById('logout').addEventListener('click', (e) => {
     localStorage.removeItem('email');
     localStorage.removeItem('login_id');
 
-    window.location.assign('./assets/HTML/login.html');
+    window.location.assign('/assets/HTML/login.html');
 });
