@@ -41,7 +41,7 @@
                         <div class="grid grid_flex">
                             <div class="grid__item size-one">
                                 <h1>
-                                    <a href="../../index.html">
+                                    <a href="/index.html">
                                         <img src="../img/logo-2T.png" alt="logo" width="102px">
                                     </a>
                                 </h1>
@@ -49,9 +49,9 @@
                             <div class="grid__item size-two">
                                 <div class="desktop-header-navbar">
                                     <div class="inner">
-                                        <ul>
+                                        <ul class="ul-navbar">
                                             <li class="dropdown">
-                                                <a href="../HTML/allProduct.html">
+                                                <a href="./allProduct.html">
                                                     Sản phẩm
                                                     <i class="fa-solid fa-chevron-down"></i>
                                                 </a>
@@ -76,12 +76,26 @@
                                             <li>
                                                 <a href="/">Liên hệ</a>
                                             </li>
+                                            <li class="dropdown icon-item search-li float-pc">
+                                                <a href="/">
+                                                    <img src="../img/search.png" alt="search">
+                                                </a>
+                                                <ul class="no-bullets">
+                                                    <form action="" method="get" class="search-bar">
+                                                        <input id="inputSearch" type="search" name="search" value=""
+                                                            placeholder="Tìm kiếm..." class="input-group-filed">
+                                                        <button id="btnSearch" type="submit" class="btn">
+                                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                                        </button>
+                                                    </form>
+                                                </ul>
+                                            </li>
                                             <li class="float-pc">
                                                 <div class="desktop-cart-wrapper">
-                                                    <a href="" style="padding: 0;">
+                                                    <a href="./cart.html" style="padding: 0;">
                                                         <img src="../img/cart.png" alt="cart">
                                                         Giỏ hàng
-                                                        <span class="hd-cart-count">0</span>
+                                                        <span id="quantityCartItem" class="hd-cart-count">0</span>
                                                     </a>
                                                     <div class="quickview-cart">
                                                         <ul class="no-bullets">
@@ -90,28 +104,23 @@
                                                     </div>
                                                 </div>
                                             </li>
-                                            <li class="dropdown icon-item search-li float-pc">
+                                            <li id="account" class="dropdown icon-item search-li float-pc">
                                                 <a href="#">
                                                     <img src="../img/account.png" alt="account">
                                                     Tài khoản
                                                 </a>
-                                                <ul class="no-bullets" style="max-height: 104px;">
+                                                <ul class="no-bullets" style="max-height: 106px;">
                                                     <li><a href="./login.html">Đăng nhập</a></li>
                                                     <li><a href="./register.html">Đăng ký</a></li>
                                                 </ul>
                                             </li>
-                                            <li class="dropdown icon-item search-li float-pc">
-                                                <a href="/">
-                                                    <img src="../img/search.png" alt="search">
-                                                </a>
-                                                <ul class="no-bullets">
-                                                    <form action="" method="get" class="search-bar">
-                                                        <input type="search" name="search" value=""
-                                                            placeholder="Tìm kiếm..." class="input-group-filed">
-                                                        <button type="submit" class="btn">
-                                                            <i class="fa-solid fa-magnifying-glass"></i>
-                                                        </button>
-                                                    </form>
+
+                                            <li id="user-info" class="dropdown float-pc" style="display: none;">
+                                                Xin chào, <span id="user-name"></span>
+                                                <ul class="no-bullets" style="max-height: 161px;">
+                                                    <li><a href="#">Thông tin tài khoản</a></li>
+                                                    <li><a href="#">Lịch sử đơn hàng</a></li>
+                                                    <li><a href="#" id="logout">Đăng xuất</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
