@@ -1,0 +1,156 @@
+.tabs {
+    display: flex;
+    position: relative;
+}
+
+.tabs .line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 6px;
+    border-radius: 15px;
+    background-color: #000;
+    transition: all 0.2s ease;
+}
+
+.tab-item {
+    min-width: 80px;
+    padding: 16px 20px 11px 20px;
+    font-size: 20px;
+    text-align: center;
+    color: #000;
+    background-color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 5px solid transparent;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.tab-icon {
+    font-size: 24px;
+    width: 32px;
+    position: relative;
+    top: 2px;
+}
+
+.tab-item:hover {
+    opacity: 1;
+    background-color: rgba(53, 49, 50, 0.05);
+    border-color: rgba(53, 49, 50, 0.05);
+}
+
+.tab-item.active {
+    opacity: 1;
+}
+
+.tab-content {
+    padding: 28px 0;
+}
+
+.tab-pane {
+    color: #333;
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.tab-pane h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.tab-content .form {
+    width: 50%;
+}
+
+.form-group {
+    display: flex;
+    margin-bottom: 16px;
+    flex-direction: column;
+}
+
+.form-label {
+    text-align: left;
+    font-weight: 700;
+    padding-bottom: 6px;
+    line-height: 1.8rem;
+    font-size: 1rem;
+}
+
+.form-control {
+    width: 50%;
+    height: 40px;
+    padding: 8px 12px;
+    border: 1px solid #b3b3b3;
+    border-radius: 3px;
+    outline: none;
+    font-size: 1rem;
+}
+
+.form-control:hover {
+    border-color: #070707;
+}
+
+.form-submit {
+    outline: none;
+    background-color: #070707;
+    margin-top: 12px;
+    padding: 12px 16px;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    width: 50%;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.form-submit:hover {
+    background-color: #232222;
+}
+
+.btn-cancel {
+    background-color: rgb(211, 38, 38);
+}
+
+.btn-confirm {
+    background-color: rgb(94, 224, 19);
+}
+
+.btn-cancel,
+.btn-confirm {
+    outline: none;
+    border-radius: 12px;
+    padding: 6px 8px;
+    color: #fff;
+}
+
+.btn-cancel:hover,
+.btn-confirm:hover {
+    cursor: pointer;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.btn-confirm:disabled {
+    background-color: rgb(5, 84, 5);
+    color: #b3b3b3;
+}
+
+.btn-cancel:disabled {
+    background-color: rgb(109, 13, 13);
+    color: #b3b3b3;
+}
