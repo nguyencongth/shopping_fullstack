@@ -1,0 +1,336 @@
+.tabs {
+    display: flex;
+    position: relative;
+}
+
+.tabs .line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 6px;
+    border-radius: 15px;
+    background-color: #000;
+    transition: all 0.2s ease;
+}
+
+.tab-item {
+    display: flex;
+    align-items: center;
+    min-width: 80px;
+    padding: 16px 20px 11px 20px;
+    font-size: 16px;
+    text-align: center;
+    color: #000;
+    background-color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 5px solid transparent;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.tab-icon {
+    font-size: 24px;
+    width: 28px;
+    padding-right: 4px;
+    position: relative;
+}
+
+.tab-item:hover {
+    opacity: 1;
+    background-color: rgba(53, 49, 50, 0.05);
+    border-color: rgba(53, 49, 50, 0.05);
+}
+
+.tab-item.active {
+    opacity: 1;
+}
+
+.tab-content {
+    padding: 28px 0;
+}
+
+.tab-pane {
+    color: #333;
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.tab-pane h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.tab-content .form {
+    width: 50%;
+}
+
+table {
+    width: 100%;
+}
+
+table th,
+table td {
+    padding: 15px 30px;
+    text-align: left;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.table th {
+    color: #364d67;
+    font-weight: 600;
+    background-color: #f1f7fd;
+}
+
+.table td {
+    background-color: white;
+}
+
+.table tbody tr {
+    border-top: 1px solid #f0f4f8;
+}
+
+.sticky-table {
+    overflow: auto;
+    border: 1px solid #f0f4f8;
+}
+
+.sticky-table tbody td:first-child,
+.sticky-table thead th:first-child {
+    position: -webkit-sticky;
+    position: sticky;
+    left: 0;
+}
+
+.btn-cancel {
+    background-color: rgb(211, 38, 38);
+}
+
+.btn-confirm {
+    background-color: rgb(94, 224, 19);
+}
+
+.btn-cancel,
+.btn-confirm {
+    outline: none;
+    border-radius: 12px;
+    padding: 6px 8px;
+    color: #fff;
+}
+
+.btn-cancel:hover,
+.btn-confirm:hover {
+    cursor: pointer;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.btn-confirm:disabled {
+    background-color: rgb(5, 84, 5);
+    color: #b3b3b3;
+}
+
+.btn-cancel:disabled {
+    background-color: rgb(109, 13, 13);
+    color: #b3b3b3;
+}
+
+.btn-detail-order {
+    color: rgb(36, 191, 253) !important;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
+}
+
+.sidebar {
+    position: relative;
+    color: #717171;
+}
+
+.sidebar h2 {
+    color: #323232;
+}
+
+.visually-hidden {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    clip: rect(0 0 0 0);
+    width: 2px;
+    height: 2px;
+    margin: -2px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
+@media (min-width: 1000px) {
+    .sidebar .sidebar-content .order-summary .order-summary-sections .order-summary-section:first-child {
+        padding-top: 0;
+    }
+}
+
+.sidebar .sidebar-content .order-summary .order-summary-sections .order-summary-section:first-child {
+    border-top: none;
+}
+
+.sidebar .sidebar-content .order-summary .order-summary-sections .order-summary-section {
+    border-top: 1px solid;
+    padding-top: 1.5em;
+    padding-bottom: 1em;
+    border-color: #e1e1e1;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 1em;
+}
+
+td:first-child,
+th:first-child {
+    padding-left: 0;
+    text-align: left;
+}
+
+td:last-child,
+th:last-child {
+    text-align: right;
+}
+
+td,
+th {
+    padding: 0;
+    padding-left: 1em;
+    border: none;
+}
+
+.sidebar .sidebar-content .order-summary .product td {
+    padding-top: 1em;
+}
+
+.sidebar .sidebar-content .order-summary .product:first-child td {
+    padding-top: 0;
+}
+
+.sidebar .sidebar-content .order-summary .product .product-image .product-thumbnail {
+    width: 4.6em;
+    height: 4.6em;
+    border-radius: 8px;
+    background: #fff;
+    position: relative;
+}
+
+.sidebar .sidebar-content .order-summary .product .product-image .product-thumbnail .product-thumbnail-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.sidebar .sidebar-content .order-summary .product .product-image .product-thumbnail .product-thumbnail-wrapper .product-thumbnail-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+}
+
+.sidebar .sidebar-content .order-summary .product .product-image .product-thumbnail .product-thumbnail-quantity {
+    font-size: 0.85714em;
+    font-weight: 500;
+    white-space: nowrap;
+    padding: 0.15em 0.65em;
+    border-radius: 2em;
+    background-color: rgba(153, 153, 153, 0.9);
+    color: #fff;
+    position: absolute;
+    right: -0.75em;
+    top: -0.75em;
+    z-index: 2;
+}
+
+.sidebar .sidebar-content .order-summary .product .product-image .product-thumbnail::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
+}
+
+.sidebar .sidebar-content .order-summary .product .product-description {
+    width: 100%;
+}
+
+.sidebar .sidebar-content .order-summary .product .product-description .product-description-name,
+.sidebar .sidebar-content .order-summary .product .product-description .product-description-variant {
+    display: block;
+}
+
+.sidebar .sidebar-content .order-summary .order-summary-emphasis {
+    font-weight: 500;
+    color: #4b4b4b;
+}
+
+.sidebar .sidebar-content .order-summary .order-summary-small-text {
+    font-size: 0.85714em;
+    color: #969696;
+}
+
+.total-line td {
+    padding-top: 0.75em;
+}
+
+.total-line-table-footer .total-line td {
+    padding-top: 3em;
+    position: relative;
+}
+
+.total-line-table-footer .total-line td::before {
+    background-color: #e1e1e1;
+    content: '';
+    position: absolute;
+    top: 1.5em;
+    left: 0;
+    width: 100%;
+    height: 1px;
+}
+
+.payment-due-label .payment-due-label-total {
+    font-size: 1.14286em;
+    color: #4b4b4b;
+}
+
+.payment-due .payment-due-price {
+    font-size: 1.71429em;
+    font-weight: 500;
+    letter-spacing: -0.04em;
+    color: #4b4b4b;
+    line-height: 1em;
+}
+
+.btn-evaluate button {
+    padding: 12px 24px;
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+}

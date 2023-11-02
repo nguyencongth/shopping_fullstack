@@ -15,9 +15,11 @@
 }
 
 .tab-item {
+    display: flex;
+    align-items: center;
     min-width: 80px;
     padding: 16px 20px 11px 20px;
-    font-size: 20px;
+    font-size: 16px;
     text-align: center;
     color: #000;
     background-color: #fff;
@@ -31,9 +33,9 @@
 
 .tab-icon {
     font-size: 24px;
-    width: 32px;
+    width: 28px;
+    padding-right: 4px;
     position: relative;
-    top: 2px;
 }
 
 .tab-item:hover {
@@ -112,45 +114,4 @@
 
 .form-submit:hover {
     background-color: #232222;
-}
-
-.btn-cancel {
-    background-color: rgb(211, 38, 38);
-}
-
-.btn-confirm {
-    background-color: rgb(94, 224, 19);
-}
-
-.btn-cancel,
-.btn-confirm {
-    outline: none;
-    border-radius: 12px;
-    padding: 6px 8px;
-    color: #fff;
-}
-
-.btn-cancel:hover,
-.btn-confirm:hover {
-    cursor: pointer;
-}
-
-.table {
-    width: 100%;
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.btn-confirm:disabled {
-    background-color: rgb(5, 84, 5);
-    color: #b3b3b3;
-}
-
-.btn-cancel:disabled {
-    background-color: rgb(109, 13, 13);
-    color: #b3b3b3;
 }

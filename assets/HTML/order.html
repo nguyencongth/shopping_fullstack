@@ -10,14 +10,14 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="../CSS/header.css">
     <link rel="stylesheet" href="../CSS/base.css">
-    <link rel="stylesheet" href="../CSS/account.css">
+    <link rel="stylesheet" href="../CSS/order.css">
     <link rel="stylesheet" href="../CSS/pre-footer.css">
     <link rel="stylesheet" href="../CSS/footer.css">
     <link rel="stylesheet" href="../CSS/allProduct.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>TẤT CẢ SẢN PHẨM - 2T-STORE</title>
+    <title>Lịch sử đơn hàng - 2T-STORE</title>
     <link rel="icon" type="image/x-icon" href="../img/logo-2T.png">
 </head>
 
@@ -142,7 +142,7 @@
                     <div class="breadcrumb-small">
                         <a href="/index.html">Trang chủ</a>
                         <span>/</span>
-                        <span>TÀI KHOẢN</span>
+                        <span>LỊCH SỬ ĐƠN HÀNG</span>
                     </div>
                 </div>
             </div>
@@ -154,12 +154,20 @@
             <!-- Tab items -->
             <div class="tabs">
                 <div class="tab-item active">
-                    <i class="tab-icon fa-solid fa-circle-user"></i>
-                    Thông tin tài khoản
+                    <img class="tab-icon" src="../img/order.png" alt="">
+                    Đơn hàng
                 </div>
                 <div class="tab-item">
-                    <img class="tab-icon" src="../img/password1.png" alt="">
-                    Đổi mật khẩu
+                    <img class="tab-icon" src="../img/order-pending.png" alt="">
+                    Chờ xác nhận
+                </div>
+                <div class="tab-item">
+                    <img class="tab-icon" src="../img/order-delivery.png" alt="">
+                    Xác nhận
+                </div>
+                <div class="tab-item">
+                    <img class="tab-icon" src="../img/history.png" alt="">
+                    Lịch sử đơn hàng
                 </div>
                 <div class="line"></div>
             </div>
@@ -167,34 +175,209 @@
             <!-- Tab content -->
             <div class="tab-content">
                 <div class="tab-pane active">
-                    <h2>Thông tin tài khoản</h2>
-
-                    <div class="form">
-                        <div class="form-group">
-                            <label for="fullname" class="form-label">Họ tên</label>
-                            <input id="fullname" name="fullname" type="text" class="form-control">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email" class="form-label">Email</label>
-                            <input id="email" name="email" type="text" class="form-control">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="phoneNumber" class="form-label">Số điện thoại</label>
-                            <input id="phoneNumber" name="phoneNumber" type="text" class="form-control">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="address" class="form-label">Địa chỉ</label>
-                            <input id="address" name="address" type="text" class="form-control">
-                        </div>
-
-                        <button class="form-submit">Cập nhật</button>
+                    <h2>Đơn hàng</h2>
+                    <div class="sticky-table">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="">Mã đơn hàng</th>
+                                    <th class="">Địa chỉ nhận hàng</th>
+                                    <th class="">Phương thức thanh toán</th>
+                                    <th class="">Ngày đặt hàng</th>
+                                    <th class="">Tổng tiền</th>
+                                    <th class="">Trạng thái</th>
+                                    <th class="text-center" colspan="3">Hành động</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td class="text-center">
+                                        <a href="" class="btn-detail-order">Xem chi tiết đơn hàng</a>
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="btn-cancel">Hủy đơn hàng</button>
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="btn-confirm" disabled>Đã nhận được hàng</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
                 <div class="tab-pane">
-                    <h2>Đổi mật khẩu</h2>
+                    <h2>Đơn hàng chờ xác nhận</h2>
+
+                    <div class="sticky-table">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="">Mã đơn hàng</th>
+                                    <th class="">Địa chỉ nhận hàng</th>
+                                    <th class="">Phương thức thanh toán</th>
+                                    <th class="">Ngày đặt hàng</th>
+                                    <th class="">Tổng tiền</th>
+                                    <th class="">Trạng thái</th>
+                                    <th class="text-center" colspan="3">Hành động</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td class="text-center">
+                                        <a href="" class="btn-detail-order">Xem chi tiết đơn hàng</a>
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="btn-cancel">Hủy đơn hàng</button>
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="btn-confirm" disabled>Đã nhận được hàng</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane">
+                    <h2>Đơn hàng được xác nhận</h2>
+
+                    <div class="sticky-table">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="">Mã đơn hàng</th>
+                                    <th class="">Địa chỉ nhận hàng</th>
+                                    <th class="">Phương thức thanh toán</th>
+                                    <th class="">Ngày đặt hàng</th>
+                                    <th class="">Tổng tiền</th>
+                                    <th class="">Trạng thái</th>
+                                    <th class="text-center" colspan="3">Hành động</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td class="text-center">
+                                        <a href="" class="btn-detail-order">Xem chi tiết đơn hàng</a>
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="btn-cancel" disabled>Hủy đơn hàng</button>
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="btn-confirm">Đã nhận được hàng</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane">
+                    <h2>Lịch sử đơn hàng</h2>
+                    <div class="sidebar">
+                        <div class="sidebar-content">
+                            <div class="order-summary order-summary-is-collapsed">
+                                <h2 class="visually-hidden">Thông tin đơn hàng</h2>
+                                <div class="order-summary-sections">
+                                    <div class="order-summary-section order-summary-section-product-list">
+                                        <table class="product-table">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">
+                                                        <span class="visually-hidden">Hình ảnh</span>
+                                                    </th>
+                                                    <th scope="col">
+                                                        <span class="visually-hidden">Mô tả</span>
+                                                    </th>
+                                                    <th scope="col">
+                                                        <span class="visually-hidden">Số lượng</span>
+                                                    </th>
+                                                    <th scope="col">
+                                                        <span class="visually-hidden">Giá</span>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="list-product">
+                                                <tr class="product">
+                                                    <td class="product-image">
+                                                        <div class="product-thumbnail">
+                                                            <div class="product-thumbnail-wrapper">
+                                                                <img class="product-thumbnail-image"
+                                                                    src="../img/ao_thiet_ke.png" alt="Áo thiết kế">
+                                                            </div>
+                                                            <span class="product-thumbnail-quantity">1</span>
+                                                        </div>
+                                                    </td>
+                                                    <td class="product-description">
+                                                        <span class="product-description-name order-summary-emphasis">Áo
+                                                            thiết
+                                                            kế</span>
+                                                        <span
+                                                            class="product-description-variant order-summary-small-text">Size
+                                                        </span>
+                                                    </td>
+                                                    <td class="product-quantity visually-hidden">
+                                                        1
+                                                    </td>
+                                                    <td class="product-price">
+                                                        <span class="order-summary-emphasis">1.500.000</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="order-summary-section order-summary-section-total-lines payment-lines">
+                                        <table class="total-line-table">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">
+                                                        <span class="visually-hidden">Mô tả</span>
+                                                    </th>
+                                                    <th scope="col">
+                                                        <span class="visually-hidden">Giá</span>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+
+                                                <tr class="total-line">
+                                                    <td class="total-line-name payment-due-label">
+                                                        <span class="payment-due-label-total">Tổng tiền</span>
+                                                    </td>
+                                                    <td class="total-line-name payment-due">
+                                                        <span id="totalPrice" class="payment-due-price">1.500.000</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot class="total-line-table-footer">
+                                                <tr class="total-line total-line-subtotal">
+                                                    <td class="total-line-name">Đánh giá</td>
+                                                    <td class="btn-evaluate">
+                                                        <button>Đánh giá</button>
+                                                    </td>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>

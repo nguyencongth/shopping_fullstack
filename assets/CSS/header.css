@@ -148,7 +148,7 @@
     text-align: left;
     position: absolute;
     z-index: 9999;
-    top: calc(100% + 8px);
+    top: calc(100% - 4px);
     right: 0px;
     width: 320px;
     padding: 5px;
