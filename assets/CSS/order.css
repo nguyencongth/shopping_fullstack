@@ -70,6 +70,7 @@
     width: 50%;
 }
 
+/*order*/
 table {
     width: 100%;
 }
@@ -82,17 +83,17 @@ table td {
     white-space: nowrap;
 }
 
-.table th {
+table th {
     color: #364d67;
     font-weight: 600;
     background-color: #f1f7fd;
 }
 
-.table td {
+table td {
     background-color: white;
 }
 
-.table tbody tr {
+table tbody tr {
     border-top: 1px solid #f0f4f8;
 }
 
@@ -108,25 +109,51 @@ table td {
     left: 0;
 }
 
+tr.orderDetails {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
 .btn-cancel {
-    background-color: rgb(211, 38, 38);
+    background-color: #FF6969;
 }
 
 .btn-confirm {
-    background-color: rgb(94, 224, 19);
+    background-color: #8aed5c;
 }
 
+.btn-detail {
+    background-color: #39A7FF;
+}
+
+.btn-detail,
 .btn-cancel,
 .btn-confirm {
     outline: none;
     border-radius: 12px;
-    padding: 6px 8px;
+    padding: 12px 24px;
     color: #fff;
 }
 
+.btn-detail,
 .btn-cancel:hover,
 .btn-confirm:hover {
     cursor: pointer;
+}
+
+.status-pending {
+    color: #FF6969;
+}
+
+.status-confirmed {
+    color: #8aed5c;
+}
+
+.status-finished {
+    color: #39A7FF;
 }
 
 .text-center {
@@ -141,10 +168,6 @@ table td {
 .btn-cancel:disabled {
     background-color: rgb(109, 13, 13);
     color: #b3b3b3;
-}
-
-.btn-detail-order {
-    color: rgb(36, 191, 253) !important;
 }
 
 .sidebar {

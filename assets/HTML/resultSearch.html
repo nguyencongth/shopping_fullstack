@@ -139,8 +139,8 @@
                                             <li id="user-info" class="dropdown float-pc" style="display: none;">
                                                 Xin chào, <span id="user-name"></span>
                                                 <ul class="no-bullets" style="max-height: 161px;">
-                                                    <li><a href="#">Thông tin tài khoản</a></li>
-                                                    <li><a href="#">Lịch sử đơn hàng</a></li>
+                                                    <li><a href="/assets/HTML/account.html">Thông tin tài khoản</a></li>
+                                                    <li><a href="/assets/HTML/order.html">Lịch sử đơn hàng</a></li>
                                                     <li><a href="#" id="logout">Đăng xuất</a></li>
                                                 </ul>
                                             </li>
@@ -235,74 +235,55 @@
                                         <div class="collection-sorting-wrapper">
                                             <div class="collection-sidebar-wrapper">
                                                 <div class="sidebar-uniform-flex">
-                                                    <div class="sidebar-item">
-                                                        <div class="collection-filter-size">
-                                                            <button class="accordion">
-                                                                <span>Kích cỡ</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="sidebar-item">
-                                                        <div class="collection-filter-color">
-                                                            <button class="accordion">
-                                                                <span>Màu sắc</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="sidebar-item">
+                                                    <div class="sidebar-item" style="margin-right: 15px;">
                                                         <div class="collection-filter-price">
-                                                            <button class="accordion active">
+                                                            <button id="btn-filter-price" class="accordion active">
                                                                 <span>Giá</span>
+                                                                <i class="btn-down fa-solid fa-sort-down"></i>
+                                                                <i class="btn-up fa-solid fa-sort-up"></i>
                                                             </button>
-                                                            <div class="panel sidebar-sort" style="max-height: 185px;">
+                                                            <div id="model" class="panel sidebar-sort">
                                                                 <ul class="no-bullets filter-price">
                                                                     <li>
                                                                         <label for="radio1">
-                                                                            <input type="radio" id="radio1"
-                                                                                name="price-filter">
+                                                                            <input value="1" type="radio" id="radio1"
+                                                                                name="price-filter" checked>
                                                                             <span>Tất cả</span>
                                                                         </label>
                                                                     </li>
                                                                     <li>
                                                                         <label for="radio2">
-                                                                            <input type="radio" id="radio2"
+                                                                            <input value="2" type="radio" id="radio2"
                                                                                 name="price-filter">
                                                                             <span>Nhỏ hơn 500,000₫</span>
                                                                         </label>
                                                                     </li>
                                                                     <li>
                                                                         <label for="radio3">
-                                                                            <input type="radio" id="radio3"
+                                                                            <input value="3" type="radio" id="radio3"
                                                                                 name="price-filter">
                                                                             <span>Từ 500,000₫ - 1,000,000₫</span>
                                                                         </label>
                                                                     </li>
                                                                     <li>
                                                                         <label for="radio4">
-                                                                            <input type="radio" id="radio4"
+                                                                            <input value="4" type="radio" id="radio4"
                                                                                 name="price-filter">
                                                                             <span>Từ 1,000,000₫ - 1,500,000₫</span>
                                                                         </label>
                                                                     </li>
                                                                     <li>
                                                                         <label for="radio5">
-                                                                            <input type="radio" id="radio5"
+                                                                            <input value="5" type="radio" id="radio5"
                                                                                 name="price-filter">
                                                                             <span>Từ 1,500,000₫ - 2,000,000₫</span>
                                                                         </label>
                                                                     </li>
                                                                     <li>
                                                                         <label for="radio6">
-                                                                            <input type="radio" id="radio6"
+                                                                            <input value="6" type="radio" id="radio6"
                                                                                 name="price-filter">
                                                                             <span>Từ 2,000,000₫ - 3,000,000₫</span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li>
-                                                                        <label for="radio7">
-                                                                            <input type="radio" id="radio7"
-                                                                                name="price-filter">
-                                                                            <span>Lớn hơn 3,000,000₫</span>
                                                                         </label>
                                                                     </li>
                                                                 </ul>

@@ -238,25 +238,59 @@
                                         <div class="collection-sorting-wrapper">
                                             <div class="collection-sidebar-wrapper">
                                                 <div class="sidebar-uniform-flex">
-                                                    <div class="sidebar-item">
-                                                        <div class="collection-filter-size">
-                                                            <button class="accordion">
-                                                                <span>Kích cỡ</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="sidebar-item">
-                                                        <div class="collection-filter-color">
-                                                            <button class="accordion">
-                                                                <span>Màu sắc</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="sidebar-item">
+                                                    <div class="sidebar-item" style="margin-right: 15px;">
                                                         <div class="collection-filter-price">
-                                                            <button class="accordion">
+                                                            <button id="btn-filter-price" class="accordion active">
                                                                 <span>Giá</span>
+                                                                <i class="btn-down fa-solid fa-sort-down"></i>
+                                                                <i class="btn-up fa-solid fa-sort-up"></i>
                                                             </button>
+                                                            <div id="model" class="panel sidebar-sort">
+                                                                <ul class="no-bullets filter-price">
+                                                                    <li>
+                                                                        <label for="radio1">
+                                                                            <input value="1" type="radio" id="radio1"
+                                                                                name="price-filter" checked>
+                                                                            <span>Tất cả</span>
+                                                                        </label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <label for="radio2">
+                                                                            <input value="2" type="radio" id="radio2"
+                                                                                name="price-filter">
+                                                                            <span>Nhỏ hơn 500,000₫</span>
+                                                                        </label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <label for="radio3">
+                                                                            <input value="3" type="radio" id="radio3"
+                                                                                name="price-filter">
+                                                                            <span>Từ 500,000₫ - 1,000,000₫</span>
+                                                                        </label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <label for="radio4">
+                                                                            <input value="4" type="radio" id="radio4"
+                                                                                name="price-filter">
+                                                                            <span>Từ 1,000,000₫ - 1,500,000₫</span>
+                                                                        </label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <label for="radio5">
+                                                                            <input value="5" type="radio" id="radio5"
+                                                                                name="price-filter">
+                                                                            <span>Từ 1,500,000₫ - 2,000,000₫</span>
+                                                                        </label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <label for="radio6">
+                                                                            <input value="6" type="radio" id="radio6"
+                                                                                name="price-filter">
+                                                                            <span>Từ 2,000,000₫ - 3,000,000₫</span>
+                                                                        </label>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -417,6 +451,7 @@
     <script type="module" src="../JS/utils/login.js"></script>
     <script type="module" src="../JS/logic/productDress.js"></script>
     <script type="text/javascript" src="../JS/fix_header.js"></script>
+    <script src="../JS/model.js"></script>
 </body>
 
 </html>

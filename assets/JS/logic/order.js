@@ -1,6 +1,7 @@
 
 import cartAPI from "../api/cartAPI";
 import orderAPI from "../api/orderAPI";
+import { toast } from "../utils/toast";
 
 const VND = new Intl.NumberFormat('vi-VN', {
     style: 'currency',
@@ -54,6 +55,10 @@ function createOrder() {
         try {
             await orderAPI.addOrder(data);
             await clearCart();
+            toast.success("Đặt hàng thành công");
+            setTimeout(() => {
+                window.location.assign("/assets/HTML/order.html");
+            }, 1000)
         } catch (error) {
             console.log("Error when ordering", error);
         }

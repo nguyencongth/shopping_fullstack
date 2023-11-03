@@ -1,4 +1,5 @@
 import cartAPI from "../api/cartAPI";
+import { toast } from "../utils/toast";
 
 const VND = new Intl.NumberFormat('vi-VN', {
     style: 'currency',
@@ -133,6 +134,7 @@ btnUpdate?.addEventListener("click", async (e) => {
             })
             await Promise.all(data.map(item => cartAPI.updateCartItemQuantity(id_customer, item.idsp, item.newQuantity)));
             getCartItems();
+            toast.success("Cập nhật số lượng thành công");
         }
     } catch (error) {
         console.log("Error updating", error);

@@ -175,38 +175,23 @@
             <!-- Tab content -->
             <div class="tab-content">
                 <div class="tab-pane active">
-                    <h2>Đơn hàng</h2>
+                    <h2>Danh sách đơn hàng</h2>
+                    <!-- <div id="orderList"></div> -->
                     <div class="sticky-table">
-                        <table class="table">
+                        <table>
                             <thead>
                                 <tr>
-                                    <th class="">Mã đơn hàng</th>
-                                    <th class="">Địa chỉ nhận hàng</th>
-                                    <th class="">Phương thức thanh toán</th>
-                                    <th class="">Ngày đặt hàng</th>
-                                    <th class="">Tổng tiền</th>
-                                    <th class="">Trạng thái</th>
+                                    <th>Mã đơn hàng</th>
+                                    <th>Ngày đặt hàng</th>
+                                    <th>Địa chỉ giao hàng</th>
+                                    <th>Tổng tiền</th>
+                                    <th>Phương thức thanh toán</th>
+                                    <th>Trạng thái</th>
                                     <th class="text-center" colspan="3">Hành động</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td class="text-center">
-                                        <a href="" class="btn-detail-order">Xem chi tiết đơn hàng</a>
-                                    </td>
-                                    <td class="text-center">
-                                        <button class="btn-cancel">Hủy đơn hàng</button>
-                                    </td>
-                                    <td class="text-center">
-                                        <button class="btn-confirm" disabled>Đã nhận được hàng</button>
-                                    </td>
-                                </tr>
+                            <tbody id="orderList">
+
                             </tbody>
                         </table>
                     </div>
@@ -528,10 +513,9 @@
             }
         });
     </script>
+    <script type="module" src="../JS/logic/orderHistory.js"></script>
     <script src="../JS/utils/logout.js"></script>
     <script type="module" src="../JS/utils/login.js"></script>
-    <!-- <script type="module" src="../JS/logic/filterProductByPrice.js"></script> -->
-    <script type="module" src="../JS/logic/product.js"></script>
     <script type="module" src="../JS/logic/searchProduct.js"></script>
     <script type="module" src="../JS/logic/cart.js"></script>
     <script type="text/javascript" src="../JS/fix_header.js"></script>
