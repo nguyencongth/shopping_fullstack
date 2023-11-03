@@ -7,6 +7,10 @@ const userAPI = {
   register(data){
     const url = '/api/Customers/register';
     return axiosClient.post(url, data);
+  },
+  getCustomerById(id) {
+    const url = `/api/Customers/getCustomerById?CustomerID=${id}`;
+    return axiosClient.get(url);
   }
 };
 

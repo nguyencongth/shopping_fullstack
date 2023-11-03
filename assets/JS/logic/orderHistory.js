@@ -26,8 +26,10 @@ try {
             paymentMethodCell.textContent = order.paymentMethod;
 
             const orderStatusCell = row.insertCell(5);
+
             let orderStatusText = '';
             let orderStatusClass = '';
+
             switch(order.orderStatus){
                 case 0: orderStatusText = "Chờ xác nhận";
                 orderStatusClass = 'status-pending';
@@ -40,7 +42,9 @@ try {
                 break;
                 default: orderStatusText = "Không xác định";
             }
+
             orderStatusCell.textContent = order.orderStatus = orderStatusText;
+            
             orderStatusCell.classList.add(orderStatusClass);
 
             const detailsButtonCell = row.insertCell(6);
@@ -86,12 +90,27 @@ try {
             const btnCancel = document.createElement("button");
             btnCancel.textContent = 'Hủy đơn hàng';
             btnCancel.classList.add('btn-cancel');
+
+            if(order.orderStatus === 'Hoàn thành' || order.orderStatus === 'Đã được xác nhận') {
+                btnCancel.disabled = true;
+            }
+            else {
+                btnCancel.disabled = false;
+            }
+
             cancelOrderCell.appendChild(btnCancel);
 
             const confirmOrderCell = row.insertCell(8);
             const btnConfirm = document.createElement("button");
             btnConfirm.textContent = 'Đã nhận được hàng';
             btnConfirm.classList.add('btn-confirm');
+
+            if(order.orderStatus === 'Chờ xác nhận' || order.orderStatus === 'Hoàn thành') {
+                btnConfirm.disabled = true;
+            }
+            else {
+                btnConfirm.disabled = false;
+            }
             confirmOrderCell.appendChild(btnConfirm);
         });
     } else {
