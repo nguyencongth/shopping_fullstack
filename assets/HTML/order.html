@@ -166,8 +166,8 @@
                     Xác nhận
                 </div>
                 <div class="tab-item">
-                    <img class="tab-icon" src="../img/history.png" alt="">
-                    Lịch sử đơn hàng
+                    <img class="tab-icon" src="../img/order_done.png" alt="">
+                    Hoàn thành
                 </div>
                 <div class="line"></div>
             </div>
@@ -176,7 +176,6 @@
             <div class="tab-content">
                 <div class="tab-pane active">
                     <h2>Danh sách đơn hàng</h2>
-                    <!-- <div id="orderList"></div> -->
                     <div class="sticky-table">
                         <table>
                             <thead>
@@ -203,33 +202,17 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th class="">Mã đơn hàng</th>
-                                    <th class="">Địa chỉ nhận hàng</th>
-                                    <th class="">Phương thức thanh toán</th>
-                                    <th class="">Ngày đặt hàng</th>
-                                    <th class="">Tổng tiền</th>
-                                    <th class="">Trạng thái</th>
+                                    <th>Mã đơn hàng</th>
+                                    <th>Ngày đặt hàng</th>
+                                    <th>Địa chỉ giao hàng</th>
+                                    <th>Tổng tiền</th>
+                                    <th>Phương thức thanh toán</th>
+                                    <th>Trạng thái</th>
                                     <th class="text-center" colspan="3">Hành động</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td class="text-center">
-                                        <a href="" class="btn-detail-order">Xem chi tiết đơn hàng</a>
-                                    </td>
-                                    <td class="text-center">
-                                        <button class="btn-cancel">Hủy đơn hàng</button>
-                                    </td>
-                                    <td class="text-center">
-                                        <button class="btn-confirm" disabled>Đã nhận được hàng</button>
-                                    </td>
-                                </tr>
+                            <tbody id="pendingOrder">
+
                             </tbody>
                         </table>
                     </div>
@@ -241,39 +224,23 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th class="">Mã đơn hàng</th>
-                                    <th class="">Địa chỉ nhận hàng</th>
-                                    <th class="">Phương thức thanh toán</th>
-                                    <th class="">Ngày đặt hàng</th>
-                                    <th class="">Tổng tiền</th>
-                                    <th class="">Trạng thái</th>
+                                    <th>Mã đơn hàng</th>
+                                    <th>Ngày đặt hàng</th>
+                                    <th>Địa chỉ giao hàng</th>
+                                    <th>Tổng tiền</th>
+                                    <th>Phương thức thanh toán</th>
+                                    <th>Trạng thái</th>
                                     <th class="text-center" colspan="3">Hành động</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td class="text-center">
-                                        <a href="" class="btn-detail-order">Xem chi tiết đơn hàng</a>
-                                    </td>
-                                    <td class="text-center">
-                                        <button class="btn-cancel" disabled>Hủy đơn hàng</button>
-                                    </td>
-                                    <td class="text-center">
-                                        <button class="btn-confirm">Đã nhận được hàng</button>
-                                    </td>
-                                </tr>
+                            <tbody id="confirmOrder">
+
                             </tbody>
                         </table>
                     </div>
                 </div>
                 <div class="tab-pane">
-                    <h2>Lịch sử đơn hàng</h2>
+                    <h2>Đơn hàng hoàn thành</h2>
                     <div class="sidebar">
                         <div class="sidebar-content">
                             <div class="order-summary order-summary-is-collapsed">
@@ -381,7 +348,8 @@
                             </div>
                             <div class="ft-sub-wrapper">
                                 <form action="" method="post">
-                                    <input type="email" name="" id="" placeholder="Vui lòng nhập email..." required>
+                                    <input type="email" name="" id="email-news" placeholder="Vui lòng nhập email..."
+                                        required>
                                     <button type="submit">Đăng ký</button>
                                 </form>
                             </div>
@@ -518,6 +486,7 @@
     <script type="module" src="../JS/utils/login.js"></script>
     <script type="module" src="../JS/logic/searchProduct.js"></script>
     <script type="module" src="../JS/logic/cart.js"></script>
+    <script type="module" src="../JS/logic/account.js"></script>
     <script type="text/javascript" src="../JS/fix_header.js"></script>
     <script src="../JS/model.js"></script>
 </body>
