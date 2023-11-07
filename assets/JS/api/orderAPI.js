@@ -12,6 +12,10 @@ const orderAPI = {
     const url = `/api/Orders/deleteOrder?orderID=${orderID}`;
     return axiosClient.delete(url);
   },
+  updateOrderStatus(orderID, status) {
+    const url = `/api/Orders/updateOrderStatus?orderId=${orderID}&newOrderStatus=${status}`;
+    return axiosClient.patch(url);
+  },
 };
 
 export default orderAPI;

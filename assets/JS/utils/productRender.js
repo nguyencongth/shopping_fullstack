@@ -22,7 +22,6 @@ export function createProductElement(product) {
 
   if(productItem) {
     productItem.addEventListener("click",()=>{
-      console.log(product.idsp);
       setTimeout(()=>{
         window.location.assign(`/assets/HTML/productDetail.html?id=${product.idsp}`);
       }, 200)

@@ -129,9 +129,14 @@ button {
     background-color: #39A7FF;
 }
 
+.btn-review {
+    background-color: #000;
+}
+
 .btn-detail,
 .btn-cancel,
-.btn-confirm {
+.btn-confirm,
+.btn-review {
     outline: none;
     border-radius: 12px;
     padding: 12px 24px;

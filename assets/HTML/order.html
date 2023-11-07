@@ -155,19 +155,19 @@
             <div class="tabs">
                 <div class="tab-item active">
                     <img class="tab-icon" src="../img/order.png" alt="">
-                    Đơn hàng
+                    <a id="tab-listOrder">Đơn hàng</a>
                 </div>
                 <div class="tab-item">
                     <img class="tab-icon" src="../img/order-pending.png" alt="">
-                    Chờ xác nhận
+                    <a id="tab-pending">Chờ xác nhận</a>
                 </div>
                 <div class="tab-item">
                     <img class="tab-icon" src="../img/order-delivery.png" alt="">
-                    Xác nhận
+                    <a id="tab-confirmed">Xác nhận</a>
                 </div>
                 <div class="tab-item">
                     <img class="tab-icon" src="../img/order_done.png" alt="">
-                    Hoàn thành
+                    <a id="tab-finished">Hoàn thành</a>
                 </div>
                 <div class="line"></div>
             </div>
@@ -241,96 +241,25 @@
                 </div>
                 <div class="tab-pane">
                     <h2>Đơn hàng hoàn thành</h2>
-                    <div class="sidebar">
-                        <div class="sidebar-content">
-                            <div class="order-summary order-summary-is-collapsed">
-                                <h2 class="visually-hidden">Thông tin đơn hàng</h2>
-                                <div class="order-summary-sections">
-                                    <div class="order-summary-section order-summary-section-product-list">
-                                        <table class="product-table">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">
-                                                        <span class="visually-hidden">Hình ảnh</span>
-                                                    </th>
-                                                    <th scope="col">
-                                                        <span class="visually-hidden">Mô tả</span>
-                                                    </th>
-                                                    <th scope="col">
-                                                        <span class="visually-hidden">Số lượng</span>
-                                                    </th>
-                                                    <th scope="col">
-                                                        <span class="visually-hidden">Giá</span>
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody id="list-product">
-                                                <tr class="product">
-                                                    <td class="product-image">
-                                                        <div class="product-thumbnail">
-                                                            <div class="product-thumbnail-wrapper">
-                                                                <img class="product-thumbnail-image"
-                                                                    src="../img/ao_thiet_ke.png" alt="Áo thiết kế">
-                                                            </div>
-                                                            <span class="product-thumbnail-quantity">1</span>
-                                                        </div>
-                                                    </td>
-                                                    <td class="product-description">
-                                                        <span class="product-description-name order-summary-emphasis">Áo
-                                                            thiết
-                                                            kế</span>
-                                                        <span
-                                                            class="product-description-variant order-summary-small-text">Size
-                                                        </span>
-                                                    </td>
-                                                    <td class="product-quantity visually-hidden">
-                                                        1
-                                                    </td>
-                                                    <td class="product-price">
-                                                        <span class="order-summary-emphasis">1.500.000</span>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div class="order-summary-section order-summary-section-total-lines payment-lines">
-                                        <table class="total-line-table">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">
-                                                        <span class="visually-hidden">Mô tả</span>
-                                                    </th>
-                                                    <th scope="col">
-                                                        <span class="visually-hidden">Giá</span>
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
 
-                                                <tr class="total-line">
-                                                    <td class="total-line-name payment-due-label">
-                                                        <span class="payment-due-label-total">Tổng tiền</span>
-                                                    </td>
-                                                    <td class="total-line-name payment-due">
-                                                        <span id="totalPrice" class="payment-due-price">1.500.000</span>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                            <tfoot class="total-line-table-footer">
-                                                <tr class="total-line total-line-subtotal">
-                                                    <td class="total-line-name">Đánh giá</td>
-                                                    <td class="btn-evaluate">
-                                                        <button>Đánh giá</button>
-                                                    </td>
-                                                </tr>
-                                            </tfoot>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="sticky-table">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Mã đơn hàng</th>
+                                    <th>Ngày đặt hàng</th>
+                                    <th>Địa chỉ giao hàng</th>
+                                    <th>Tổng tiền</th>
+                                    <th>Phương thức thanh toán</th>
+                                    <th>Trạng thái</th>
+                                    <th class="text-center" colspan="3">Hành động</th>
+                                </tr>
+                            </thead>
+                            <tbody id="finishedOrder">
+
+                            </tbody>
+                        </table>
                     </div>
-
                 </div>
             </div>
         </div>

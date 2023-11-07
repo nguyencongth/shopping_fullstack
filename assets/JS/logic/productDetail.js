@@ -7,7 +7,6 @@ function renderProductDetails(product) {
         style: 'currency',
         currency: 'VND',
     });
-    // const productDetail = document.querySelector("#product-wrapper");
     const productImage = document.querySelector(".img");
     const productName = document.querySelector(".namePro");
     const productPrice = document.querySelector(".current-price");
