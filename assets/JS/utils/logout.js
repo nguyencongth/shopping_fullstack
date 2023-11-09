@@ -3,6 +3,7 @@ document.getElementById('logout').addEventListener('click', (e) => {
     localStorage.removeItem('isLoggedIn');
     localStorage.removeItem('email');
     localStorage.removeItem('login_id');
+    localStorage.removeItem('token');
 
     window.location.assign('/assets/HTML/login.html');
 });
