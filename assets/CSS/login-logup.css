@@ -117,3 +117,12 @@
 .spacer {
     margin-top: 36px;
 }
+
+.forgot-password {
+    text-align: right;
+}
+
+.forgot-password span {
+    font-size: 14px;
+    color: #007AFF;
+}
