@@ -195,103 +195,62 @@
                 </div>
                 <div class="tab-pane">
                     <h2>Đổi mật khẩu</h2>
+                    <form id="form-changePassword" class="form" action="" method="post">
+                        <div class="form-group">
+                            <label for="currentPassword" class="form-label">Mật khẩu hiện tại</label>
+                            <input id="currentPassword" name="currentPassword" type="password" class="form-control">
+                            <span id="currentPasswordError" class="form-message"></span>
+                        </div>
 
+                        <div class="form-group">
+                            <label for="newPassword" class="form-label">Mật khẩu mới</label>
+                            <input id="newPassword" name="newPassword" type="password" class="form-control">
+                            <span class="form-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirmNewPassword" class="form-label">Xác nhận mật khẩu mới</label>
+                            <input id="confirmNewPassword" name="confirmNewPassword" type="password"
+                                class="form-control">
+                            <span class="form-message"></span>
+                        </div>
+
+                        <button id="btn-changePassword" class="form-submit">Đổi mật khẩu</button>
+                    </form>
+                    <!-- <div id="form-changePassword" class="form">
+                        
+                    </div> -->
                 </div>
             </div>
         </div>
-    </div>
 
-    <div id="pre-footer">
-        <div class="wrapper">
-            <div class="inner">
-                <div class="form">
-                    <div class="form-item">
-                        <div class="ft-subscribe">
-                            <div class="section-title">
-                                <h2>Đăng ký bản tin</h2>
-                                <p>Đăng ký nhận bản tin 2T STORE để được cập nhật những mẫu thiết kế mới nhất</p>
-                            </div>
-                            <div class="ft-sub-wrapper">
-                                <form action="" method="post">
-                                    <input type="email" name="" id="email-news" placeholder="Vui lòng nhập email..."
-                                        required>
-                                    <button type="submit">Đăng ký</button>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="ft-social">
-                            <a href="https://www.facebook.com/thanhnc279/" class="fb">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="https://www.instagram.com/congthanh_2709/" class="insta">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="https://www.youtube.com/channel/UCKEusTzad6SCH-BijWm59rQ" class="youtube">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <footer id="footer">
-        <div class="footer-content">
+        <div id="pre-footer">
             <div class="wrapper">
                 <div class="inner">
-                    <div class="ft-contact">
-                        <h3 class="ft-title">2T STORE - THỜI TRANG CÔNG SỞ</h3>
-                        <div class="ft-contact-desc">
-                            Công ty TNHH 2T STORE
-                        </div>
-                        <div class="ft-contact-address">
-                            Địa chỉ: Số n, quận Thanh Xuân, Hà Nội
-                        </div>
-                        <div class="ft-contact-tel">
-                            Chăm sóc khách hàng: 0328849954
-                            <br>
-                            Mua hàng online: 0865806009
-                        </div>
-                        <div class="ft-contact-email">
-                            Email: thanhcong27092002@gmail.com
-                        </div>
-                    </div>
-                    <div class="ft-nav">
-                        <h3 class="ft-title"></h3>
-                        <ul>
-                            <li><a href="">Giới thiệu</a></li>
-                            <li><a href="">Triết lý kinh doanh tại 2T STORE</a></li>
-                            <li><a href="">2T STORE's Blog</a></li>
-                            <li><a href="">Hệ thống showroom</a></li>
-                            <li><a href="">Liên hệ</a></li>
-                        </ul>
-                    </div>
-                    <div class="ft-nav">
-                        <h3 class="ft-title"></h3>
-                        <ul>
-                            <li><a href="">Chính sách giao nhận - Vận chuyển</a></li>
-                            <li><a href=""></a></li>
-                            <li><a href="">Tra cứu đơn hàng</a></li>
-                            <li><a href="">Hướng dẫn chọn Size</a></li>
-                            <li><a href="">Quy định đổi hàng</a></li>
-                            <li><a href="">Quy định bảo hành và sửa chữa</a></li>
-                            <li><a href="">Khách hàng thân thiết</a></li>
-                        </ul>
-                    </div>
-                    <div class="ft-nav">
-                        <h3 class="ft-title"></h3>
-                        <div class="ft-content">
-                            <p>Phương thức thanh toán</p>
-                            <div class="image-payment">
-                                <div class="item">
-                                    <a href="">
-                                        <img src="../img/image_method_3.png" alt="">
-                                    </a>
+                    <div class="form">
+                        <div class="form-item">
+                            <div class="ft-subscribe">
+                                <div class="section-title">
+                                    <h2>Đăng ký bản tin</h2>
+                                    <p>Đăng ký nhận bản tin 2T STORE để được cập nhật những mẫu thiết kế mới nhất</p>
+                                </div>
+                                <div class="ft-sub-wrapper">
+                                    <form action="" method="post">
+                                        <input type="email" name="" id="email-news" placeholder="Vui lòng nhập email..."
+                                            required>
+                                        <button type="submit">Đăng ký</button>
+                                    </form>
                                 </div>
                             </div>
-                            <div class="bct">
-                                <a href="">
-                                    <img src="../img/bct.png" alt="" width="118px">
+                            <div class="ft-social">
+                                <a href="https://www.facebook.com/thanhnc279/" class="fb">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="https://www.instagram.com/congthanh_2709/" class="insta">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="https://www.youtube.com/channel/UCKEusTzad6SCH-BijWm59rQ" class="youtube">
+                                    <i class="fab fa-youtube"></i>
                                 </a>
                             </div>
                         </div>
@@ -299,60 +258,143 @@
                 </div>
             </div>
         </div>
-        <div class="footer-copyright">
-            <div class="designer">
-                Created by
-                <span>Nguyen Cong Thanh</span>
-                | all rights reserved
+        <footer id="footer">
+            <div class="footer-content">
+                <div class="wrapper">
+                    <div class="inner">
+                        <div class="ft-contact">
+                            <h3 class="ft-title">2T STORE - THỜI TRANG CÔNG SỞ</h3>
+                            <div class="ft-contact-desc">
+                                Công ty TNHH 2T STORE
+                            </div>
+                            <div class="ft-contact-address">
+                                Địa chỉ: Số n, quận Thanh Xuân, Hà Nội
+                            </div>
+                            <div class="ft-contact-tel">
+                                Chăm sóc khách hàng: 0328849954
+                                <br>
+                                Mua hàng online: 0865806009
+                            </div>
+                            <div class="ft-contact-email">
+                                Email: thanhcong27092002@gmail.com
+                            </div>
+                        </div>
+                        <div class="ft-nav">
+                            <h3 class="ft-title"></h3>
+                            <ul>
+                                <li><a href="">Giới thiệu</a></li>
+                                <li><a href="">Triết lý kinh doanh tại 2T STORE</a></li>
+                                <li><a href="">2T STORE's Blog</a></li>
+                                <li><a href="">Hệ thống showroom</a></li>
+                                <li><a href="">Liên hệ</a></li>
+                            </ul>
+                        </div>
+                        <div class="ft-nav">
+                            <h3 class="ft-title"></h3>
+                            <ul>
+                                <li><a href="">Chính sách giao nhận - Vận chuyển</a></li>
+                                <li><a href=""></a></li>
+                                <li><a href="">Tra cứu đơn hàng</a></li>
+                                <li><a href="">Hướng dẫn chọn Size</a></li>
+                                <li><a href="">Quy định đổi hàng</a></li>
+                                <li><a href="">Quy định bảo hành và sửa chữa</a></li>
+                                <li><a href="">Khách hàng thân thiết</a></li>
+                            </ul>
+                        </div>
+                        <div class="ft-nav">
+                            <h3 class="ft-title"></h3>
+                            <div class="ft-content">
+                                <p>Phương thức thanh toán</p>
+                                <div class="image-payment">
+                                    <div class="item">
+                                        <a href="">
+                                            <img src="../img/image_method_3.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="bct">
+                                    <a href="">
+                                        <img src="../img/bct.png" alt="" width="118px">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </footer>
-    <script>
-        const isLoggedIn = localStorage.getItem('isLoggedIn');
-        if (isLoggedIn) {
-            document.getElementById("account").style.display = "none";
-            document.getElementById("user-info").style.display = "block";
-            document.getElementById("user-name").textContent = localStorage.getItem('email');
-        }
-        else {
-            document.getElementById("account").style.display = "block";
-            document.getElementById("user-info").style.display = "none";
-        }
-    </script>
-    <script>
-        const $ = document.querySelector.bind(document);
-        const $$ = document.querySelectorAll.bind(document);
-
-        const tabs = $$('.tab-item');
-        const panes = $$('.tab-pane');
-
-        const tabActive = $('.tab-item.active');
-        const line = $('.tabs .line');
-
-        line.style.left = tabActive.offsetLeft + 'px';
-        line.style.width = tabActive.offsetWidth + 'px';
-
-
-        tabs.forEach((tab, index) => {
-            tab.onclick = function () {
-                const pane = panes[index];
-                $('.tab-item.active').classList.remove('active');
-                this.classList.add('active');// = tab.classList.add('active');
-                $('.tab-pane.active').classList.remove('active');
-                pane.classList.add('active');
-
-                line.style.left = tab.offsetLeft + 'px';
-                line.style.width = tab.offsetWidth + 'px';
+            <div class="footer-copyright">
+                <div class="designer">
+                    Created by
+                    <span>Nguyen Cong Thanh</span>
+                    | all rights reserved
+                </div>
+            </div>
+        </footer>
+        <script src="../JS/validate.js"></script>
+        <script>
+            Validator({
+                form: '#form-changePassword',
+                formGroupSelector: '.form-group',
+                errorSelector: '.form-message',
+                rules: [
+                    Validator.isRequired('#currentPassword'),
+                    Validator.minLength('#newPassword', 6),
+                    Validator.isRequired('#confirmNewPassword'),
+                    Validator.isConfirm('#confirmNewPassword', function () {
+                        return document.querySelector('#form-changePassword #newPassword').value;
+                    }, 'Mật khẩu xác nhận không chính xác'),
+                ],
+                onSubmit: function (data) {
+                    console.log(data);
+                }
+            });
+        </script>
+        <script>
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+            if (isLoggedIn) {
+                document.getElementById("account").style.display = "none";
+                document.getElementById("user-info").style.display = "block";
+                document.getElementById("user-name").textContent = localStorage.getItem('email');
             }
-        });
-    </script>
-    <script src="../JS/utils/logout.js"></script>
-    <script type="module" src="../JS/logic/account.js"></script>
-    <script type="module" src="../JS/utils/login.js"></script>
-    <script type="module" src="../JS/logic/searchProduct.js"></script>
-    <script type="module" src="../JS/logic/cart.js"></script>
-    <script type="text/javascript" src="../JS/fix_header.js"></script>
-    <script src="../JS/model.js"></script>
+            else {
+                document.getElementById("account").style.display = "block";
+                document.getElementById("user-info").style.display = "none";
+            }
+        </script>
+        <script>
+            const $ = document.querySelector.bind(document);
+            const $$ = document.querySelectorAll.bind(document);
+
+            const tabs = $$('.tab-item');
+            const panes = $$('.tab-pane');
+
+            const tabActive = $('.tab-item.active');
+            const line = $('.tabs .line');
+
+            line.style.left = tabActive.offsetLeft + 'px';
+            line.style.width = tabActive.offsetWidth + 'px';
+
+
+            tabs.forEach((tab, index) => {
+                tab.onclick = function () {
+                    const pane = panes[index];
+                    $('.tab-item.active').classList.remove('active');
+                    this.classList.add('active');// = tab.classList.add('active');
+                    $('.tab-pane.active').classList.remove('active');
+                    pane.classList.add('active');
+
+                    line.style.left = tab.offsetLeft + 'px';
+                    line.style.width = tab.offsetWidth + 'px';
+                }
+            });
+        </script>
+        <script src="../JS/utils/logout.js"></script>
+        <script type="module" src="../JS/logic/account.js"></script>
+        <script type="module" src="../JS/utils/login.js"></script>
+        <script type="module" src="../JS/logic/searchProduct.js"></script>
+        <script type="module" src="../JS/logic/cart.js"></script>
+        <script type="text/javascript" src="../JS/fix_header.js"></script>
+        <script src="../JS/model.js"></script>
 </body>
 
 </html>

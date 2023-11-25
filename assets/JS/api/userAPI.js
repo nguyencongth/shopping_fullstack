@@ -11,7 +11,15 @@ const userAPI = {
   getCustomerById(id) {
     const url = `/api/Customers/getCustomerById?CustomerID=${id}`;
     return axiosClient.get(url);
-  }
+  },
+  changePassword(customerID, currentPassword, newPassword, confirmNewPassword) {
+    const url = `/api/Customers/changePassword?customerID=${customerID}&currentPassword=${currentPassword}&newPassword=${newPassword}&confirmNewPassword=${confirmNewPassword}`;
+    return axiosClient.patch(url);
+  },
+  updateInfo(data) {
+    const url = `/api/Customers/updateInfo`;
+    return axiosClient.patch(url, data);
+  },
 };
 
 export default userAPI;

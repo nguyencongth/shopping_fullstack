@@ -1,4 +1,7 @@
 import userAPI from "../api/userAPI";
+import { toast } from "../utils/toast";
+
+const customerID = localStorage.getItem('login_id');
 
 async function getCustomerById() {
     const customerID = localStorage.getItem("login_id");
@@ -23,3 +26,32 @@ async function getCustomerById() {
 }
 
 getCustomerById()
+
+function changePassword() {
+    const btn_changePassword = document.getElementById('btn-changePassword');
+    const currentPasswordError = document.getElementById('currentPasswordError');
+    const currentPasswordInput = document.getElementById('currentPassword');
+    const form = document.getElementById('form-changePassword');
+
+    btn_changePassword.addEventListener('click', async (e)=> {
+        e.preventDefault();
+        const currentPassword = document.getElementById('currentPassword').value;
+        const newPassword = document.getElementById('newPassword').value;
+        const confirmNewPassword = document.getElementById('confirmNewPassword').value;
+        try {
+            const response = await userAPI.changePassword(customerID, currentPassword, newPassword, confirmNewPassword);
+            if(response.statusCode === 200) {
+                currentPasswordInput.classList.remove('error-current-password');
+                form.reset();
+                toast.success("Đổi mật khẩu thành công");
+            } else if(response.statusCode === 401) {
+                currentPasswordError.textContent = response.statusMessage;
+                currentPasswordInput.classList.add('error-current-password');
+            }
+        } catch (error) {
+            console.log(error);
+        }
+
+    })
+}
+changePassword();

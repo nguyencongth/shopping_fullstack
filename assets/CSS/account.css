@@ -115,3 +115,19 @@
 .form-submit:hover {
     background-color: #232222;
 }
+
+.form-group.invalid .form-control {
+    border-color: #f33a58;
+}
+
+.form-group.invalid .form-message {
+    color: #f33a58;
+}
+
+#currentPasswordError {
+    color: #f33a58;
+}
+
+.error-current-password {
+    border-color: #f33a58;
+}
