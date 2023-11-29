@@ -55,3 +55,31 @@ function changePassword() {
     })
 }
 changePassword();
+
+function updateInfoClient() {
+    const btn_updateInfo = document.getElementById('btn_updateInfo');
+    btn_updateInfo.addEventListener('click', async (e) => {
+        e.preventDefault();
+        const fullName = document.getElementById('fullName').value;
+        const email = document.getElementById('email').value;
+        const phoneNumber = document.getElementById('phoneNumber').value;
+        const address = document.getElementById('address').value;
+        try {
+            const data = {
+                id_customer: customerID,
+                fullname: fullName,
+                email: email,
+                phonenumber: phoneNumber,
+                password: "string",
+                address: address
+            }
+            await userAPI.updateInfo(data);
+            toast.success("Cập nhật thông tin tài khoản thành công");
+        } catch (error) {
+            console.log(error);
+        }
+    })
+}
+(async () => {
+    updateInfoClient();
+  })();

@@ -1,8 +1,9 @@
 import axios from "axios";
 const axiosClient = axios.create({
-  baseURL: "https://localhost:7249",
+  baseURL: "http://congthanh279-001-site1.ftempurl.com",
   headers: {
     "Content-Type": "application/json",
+    "Accept": "application/json",
   },
 });
 
