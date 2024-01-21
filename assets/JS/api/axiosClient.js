@@ -1,6 +1,6 @@
 import axios from "axios";
 const axiosClient = axios.create({
-  baseURL: "http://congthanh279-001-site1.ftempurl.com",
+  baseURL: "https://localhost:7249",
   headers: {
     "Content-Type": "application/json",
     "Accept": "application/json",
